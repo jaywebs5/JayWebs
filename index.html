@@ -3,36 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>JayWebs | Futuristic Web Design South Africa</title>
+  <title>JayWebs | Professional Web Design & Development South Africa</title>
 
-  <!-- SEO Meta -->
-  <meta name="description" content="JayWebs - Futuristic web design & development services in South Africa. Build a powerful online presence with our premium websites." />
-  <meta name="keywords" content="web design, South Africa, futuristic websites, premium web development, JayWebs" />
+  <meta name="description" content="JayWebs creates modern, responsive websites for businesses, entrepreneurs and organizations in South Africa." />
+  <meta name="keywords" content="web design, South Africa, web development, responsive websites, JayWebs" />
   <meta name="author" content="JayWebs" />
+  <link rel="canonical" href="https://www.jaywebs.site/" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="JayWebs | Futuristic Web Design South Africa" />
-  <meta property="og:description" content="Build your brand and power your presence with JayWebs. Luxury, tech, and performance combined." />
-  <meta property="og:image" content="https://i.postimg.cc/8c06tqfc/83A6E605-32BD-40DB-B243-D407F4500B54.png" />
-  <meta property="og:url" content="https://www.jaywebs.site" />
+  <meta property="og:title" content="JayWebs | Professional Web Design & Development South Africa" />
+  <meta property="og:description" content="Modern, responsive websites designed to help businesses build credibility, attract customers and grow online." />
+  <meta property="og:image" content="https://i.postimg.cc/SQJHd3P3/FF369872-B995-4943-8981-FDB5859BE291.png" />
+  <meta property="og:url" content="https://www.jaywebs.site/" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="JayWebs" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="JayWebs | Futuristic Web Design South Africa" />
-  <meta name="twitter:description" content="Build your brand and power your presence with JayWebs. Luxury, tech, and performance combined." />
-  <meta name="twitter:image" content="https://i.postimg.cc/8c06tqfc/83A6E605-32BD-40DB-B243-D407F4500B54.png" />
+  <meta name="twitter:title" content="JayWebs | Professional Web Design & Development South Africa" />
+  <meta name="twitter:description" content="Modern, responsive websites designed to help businesses build credibility, attract customers and grow online." />
+  <meta name="twitter:image" content="https://i.postimg.cc/SQJHd3P3/FF369872-B995-4943-8981-FDB5859BE291.png" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/8c06tqfc/83A6E605-32BD-40DB-B243-D407F4500B54.png">
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/SQJHd3P3/FF369872-B995-4943-8981-FDB5859BE291.png">
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
@@ -48,14 +41,12 @@
       --text-muted: #a1a1aa;
       --accent: #00bfff;
 
-      /* Clay */
       --clay-base: #18181b;
       --clay-shadow: rgba(0, 0, 0, 0.9);
       --clay-inset-light: rgba(255, 255, 255, 0.04);
       --clay-inset-dark: rgba(0, 0, 0, 0.6);
       --clay-border: rgba(255, 255, 255, 0.04);
 
-      /* Fluid spacing scale */
       --space-xs: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
       --space-sm: clamp(0.75rem, 0.6rem + 0.75vw, 1.25rem);
       --space-md: clamp(1.25rem, 1rem + 1.5vw, 2rem);
@@ -63,7 +54,6 @@
       --space-xl: clamp(3rem, 2rem + 4vw, 6rem);
       --section-y: clamp(3.5rem, 2rem + 6vw, 7rem);
 
-      /* Fluid type scale */
       --fs-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
       --fs-sm: clamp(0.82rem, 0.78rem + 0.2vw, 0.92rem);
       --fs-base: clamp(0.92rem, 0.88rem + 0.2vw, 1.02rem);
@@ -75,11 +65,7 @@
     }
 
     html { scroll-behavior: smooth; }
-
-    html, body {
-      max-width: 100%;
-      overflow-x: hidden;
-    }
+    html, body { max-width: 100%; overflow-x: hidden; }
 
     body {
       background-color: var(--bg-dark);
@@ -93,7 +79,6 @@
       padding-right: env(safe-area-inset-right);
     }
 
-    /* Clinical SaaS grid overlay */
     body::before {
       content: '';
       position: fixed;
@@ -116,9 +101,6 @@
       overflow: hidden; clip: rect(0, 0, 0, 0);
     }
 
-    /* =========================================================
-       TYPOGRAPHY
-       ========================================================= */
     h1, h2, h3 { font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; }
 
     .section-head { text-align: center; margin-bottom: var(--space-lg); }
@@ -132,13 +114,10 @@
     .section-sub {
       color: var(--text-muted);
       font-size: var(--fs-base);
-      max-width: 560px;
+      max-width: 620px;
       margin: 0 auto;
     }
 
-    /* =========================================================
-       CONTAINER — adapts to all screens
-       ========================================================= */
     .container {
       width: 100%;
       max-width: min(1200px, 92vw);
@@ -150,12 +129,8 @@
     }
 
     section { position: relative; z-index: 1; }
-
     .section-padding { padding: var(--section-y) 0; }
 
-    /* =========================================================
-       CLAY UTILITIES
-       ========================================================= */
     .clay {
       background: var(--clay-base);
       border-radius: clamp(16px, 2vw, 22px);
@@ -248,7 +223,7 @@
         transparent);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      transition: transform 0.4s ease;
+      transition: transform 0.4s ease, padding 0.3s ease;
     }
     .navbar.hidden { transform: translateY(-100%); }
 
@@ -258,33 +233,21 @@
       gap: 10px;
       font-weight: 600;
       letter-spacing: -0.03em;
-      font-size: var(--fs-md);
       color: var(--text-main);
       flex-shrink: 0;
     }
 
-  .logo img {
-  height: clamp(48px, 6vw, 68px);
-  width: auto;
-  max-width: clamp(180px, 28vw, 260px);
-  object-fit: contain;
-  opacity: 1;
-  filter: none;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  display: block;
-}
-    .logo:hover img {
-      opacity: 0.9;
-      transform: scale(1.05);
+    .logo img {
+      height: clamp(48px, 6vw, 68px);
+      width: auto;
+      max-width: clamp(180px, 28vw, 260px);
+      object-fit: contain;
+      opacity: 1;
+      filter: none;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      display: block;
     }
-
-    .logo span {
-      font-weight: 600;
-      letter-spacing: -0.03em;
-      font-size: var(--fs-md);
-      color: var(--text-main);
-      white-space: nowrap;
-    }
+    .logo:hover img { opacity: 0.9; transform: scale(1.04); }
 
     .nav-links {
       display: flex;
@@ -303,7 +266,7 @@
     .nav-links a {
       font-size: var(--fs-xs);
       color: var(--text-muted);
-      padding: 0.5rem 0.75rem;
+      padding: 0.5rem 0.85rem;
       border-radius: 30px;
       transition: color 0.2s ease, background 0.2s ease;
       white-space: nowrap;
@@ -312,6 +275,21 @@
     .nav-links a.active {
       color: var(--text-main);
       background: rgba(255, 255, 255, 0.04);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .nav-cta {
+      padding: 0.65rem 1.25rem;
+      font-size: var(--fs-xs);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .menu-btn {
@@ -338,8 +316,7 @@
        ========================================================= */
     .hero {
       position: relative;
-      padding: clamp(7rem, 12vw, 11rem) clamp(1rem, 3vw, 2rem) clamp(3rem, 6vw, 6rem);
-      text-align: center;
+      padding: clamp(8rem, 14vw, 12rem) clamp(1rem, 3vw, 2rem) clamp(3rem, 6vw, 5rem);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -351,134 +328,236 @@
       justify-content: center;
     }
 
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+      width: 100%;
+      max-width: min(1200px, 92vw);
+      margin: 0 auto;
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      align-items: flex-start;
+      text-align: left;
+    }
+
     .hero h1 {
       font-size: var(--fs-3xl);
-      max-width: 900px;
+      max-width: 780px;
       letter-spacing: -0.045em;
       line-height: 1.03;
       color: var(--text-main);
+      text-transform: uppercase;
     }
 
     .hero .hero-sub {
       color: var(--text-muted);
-      max-width: 520px;
+      max-width: 560px;
       font-size: var(--fs-md);
-      padding: 0 0.5rem;
+      line-height: 1.6;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.75rem;
-      justify-content: center;
       margin-top: 0.5rem;
-      width: 100%;
-      max-width: 500px;
     }
 
-    .hero-actions .chunky-btn {
-      flex: 1 1 auto;
-      min-width: 180px;
-    }
-
-    /* =========================================================
-       ABOUT
-       ========================================================= */
-    .about-text {
-      max-width: 760px;
-      margin: 0 auto var(--space-md);
-      font-size: var(--fs-md);
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
       color: var(--text-muted);
-      text-align: center;
-      line-height: 1.75;
+      font-size: var(--fs-xs);
+      letter-spacing: 0.02em;
+      margin-top: 0.75rem;
     }
+    .hero-trust span { display: inline-flex; align-items: center; gap: 6px; }
+    .hero-trust i { color: var(--accent); font-size: 0.7rem; }
 
-    .about-quote {
-      text-align: center;
-      font-size: var(--fs-lg);
-      color: var(--text-main);
-      margin: 0 auto var(--space-lg);
-      max-width: 620px;
-      font-style: italic;
-      letter-spacing: -0.01em;
-      padding: 0 0.5rem;
-    }
+    .hero-visual { position: relative; width: 100%; max-width: 560px; margin: 0 auto; }
 
-    .owner-card {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2.5rem);
-      text-align: center;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-    .owner-card:hover {
-      transform: translateY(-6px);
+    .browser-mock {
+      border-radius: clamp(14px, 2vw, 20px);
+      overflow: hidden;
+      background: var(--clay-base);
+      border: 1px solid var(--clay-border);
       box-shadow:
-        12px 14px 30px var(--clay-shadow),
-        -4px -4px 12px rgba(255, 255, 255, 0.02),
+        14px 14px 34px var(--clay-shadow),
+        -6px -6px 16px rgba(255, 255, 255, 0.02),
         inset 3px 3px 6px var(--clay-inset-light),
         inset -3px -3px 6px var(--clay-inset-dark);
     }
-    .owner-card h3 {
-      font-size: var(--fs-lg);
-      margin-bottom: 0.4rem;
+
+    .browser-bar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     }
-    .owner-card h4 {
-      font-size: var(--fs-base);
-      color: var(--accent);
-      font-weight: 500;
-      margin-bottom: 1.25rem;
-      letter-spacing: 0.02em;
+    .browser-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); }
+    .browser-dot.accent { background: var(--accent); opacity: 0.6; }
+    .browser-url {
+      margin-left: 12px; flex: 1; height: 20px; border-radius: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      display: flex; align-items: center; padding: 0 10px;
+      font-size: 0.65rem; color: var(--text-muted); letter-spacing: 0.02em;
     }
-    .owner-card p {
-      color: var(--text-muted);
-      font-size: var(--fs-sm);
-      line-height: 1.7;
+
+    .browser-body {
+      aspect-ratio: 16 / 10;
+      background: linear-gradient(135deg, #0f0f11 0%, #18181b 100%);
+      position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+
+    .mock-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+    .mock-nav-bar { height: 6px; width: 40px; background: rgba(255, 255, 255, 0.08); border-radius: 3px; }
+    .mock-nav-links { display: flex; gap: 8px; }
+    .mock-nav-links span { height: 5px; width: 24px; background: rgba(255, 255, 255, 0.05); border-radius: 3px; }
+
+    .mock-hero { flex: 1; display: flex; align-items: center; justify-content: center; padding: 16px; gap: 12px; }
+    .mock-hero-left { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .mock-line-lg { height: 12px; width: 90%; background: rgba(255, 255, 255, 0.1); border-radius: 4px; }
+    .mock-line-md { height: 8px; width: 70%; background: rgba(255, 255, 255, 0.06); border-radius: 4px; }
+    .mock-line-sm { height: 6px; width: 50%; background: rgba(255, 255, 255, 0.04); border-radius: 4px; }
+    .mock-btn { height: 20px; width: 80px; border-radius: 10px; background: var(--accent); opacity: 0.7; margin-top: 4px; }
+    .mock-hero-right {
+      flex: 1; aspect-ratio: 1; border-radius: 12px;
+      background: radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.15), transparent 60%),
+                  linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255, 255, 255, 0.04); position: relative;
+    }
+    .mock-hero-right::after {
+      content: ''; position: absolute; inset: 20%; border-radius: 8px;
+      border: 1px solid rgba(0, 191, 255, 0.2);
     }
 
     /* =========================================================
-       3D CLAY SPHERE — OUR MASTERPIECES
+       TRUST STRIP
+       ========================================================= */
+    .trust-strip {
+      padding: clamp(1.5rem, 3vw, 2.5rem) 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .trust-strip-inner {
+      display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+      gap: clamp(1rem, 3vw, 2.5rem);
+    }
+    .trust-item {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: var(--fs-xs); letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--text-muted); white-space: nowrap;
+    }
+    .trust-item i { color: var(--accent); font-size: 0.85rem; }
+
+    /* =========================================================
+       SERVICES GRID
+       ========================================================= */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: clamp(1rem, 2.5vw, 1.75rem);
+    }
+
+    .service-card {
+      padding: clamp(1.5rem, 3vw, 2.25rem);
+      display: flex; flex-direction: column; gap: 0.85rem;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      position: relative;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        12px 16px 34px var(--clay-shadow),
+        -4px -4px 14px rgba(255, 255, 255, 0.03),
+        inset 3px 3px 6px var(--clay-inset-light),
+        inset -3px -3px 6px var(--clay-inset-dark);
+    }
+
+    .service-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--clay-base); color: var(--accent); font-size: 1.15rem;
+      border: 1px solid var(--clay-border);
+      box-shadow:
+        inset 2px 2px 4px var(--clay-inset-light),
+        inset -2px -2px 4px var(--clay-inset-dark);
+    }
+
+    .service-card h3 { font-size: var(--fs-lg); color: var(--text-main); letter-spacing: -0.02em; }
+    .service-card p { color: var(--text-muted); font-size: var(--fs-sm); line-height: 1.65; flex-grow: 1; }
+
+    .service-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: var(--fs-xs); color: var(--text-muted);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      margin-top: 0.5rem;
+      transition: color 0.2s ease, gap 0.2s ease;
+    }
+    .service-card:hover .service-link { color: var(--accent); gap: 10px; }
+
+    /* =========================================================
+       WHY JAYWEBS GRID
+       ========================================================= */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+      gap: clamp(1rem, 2.5vw, 1.5rem);
+    }
+
+    .why-card {
+      padding: clamp(1.5rem, 3vw, 2rem);
+      text-align: left;
+      transition: transform 0.35s ease;
+    }
+    .why-card:hover { transform: translateY(-6px); }
+
+    .why-card .why-num {
+      font-size: var(--fs-xs); color: var(--accent);
+      letter-spacing: 0.2em; margin-bottom: 0.85rem; font-weight: 600;
+    }
+    .why-card h3 { font-size: var(--fs-md); margin-bottom: 0.6rem; color: var(--text-main); }
+    .why-card p { color: var(--text-muted); font-size: var(--fs-sm); line-height: 1.65; }
+
+    /* =========================================================
+       3D CLAY SPHERE — SELECTED WORK
        ========================================================= */
     .gallery-wrap {
-      position: relative;
-      height: 300vh;
-      width: 100%;
+      position: relative; height: 300vh; width: 100%;
       background: radial-gradient(circle at 50% 45%, #131316 0%, var(--bg-dark) 70%);
     }
 
     .scene {
-      position: sticky;
-      top: 0;
-      height: 100svh;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      perspective: 1200px;
-      overflow: hidden;
+      position: sticky; top: 0; height: 100svh; width: 100%;
+      display: flex; justify-content: center; align-items: center;
+      perspective: 1200px; overflow: hidden;
     }
 
     .sphere {
-      position: relative;
-      width: 0;
-      height: 0;
-      transform-style: preserve-3d;
-      z-index: 2;
-      /* Dynamic scale so sphere fits any screen */
+      position: relative; width: 0; height: 0;
+      transform-style: preserve-3d; z-index: 2;
       transform-origin: center center;
     }
 
     .clay-card {
-      position: absolute;
-      width: 170px;
-      height: 230px;
-      left: -85px;
-      top: -115px;
+      position: absolute; width: 170px; height: 230px;
+      left: -85px; top: -115px;
       background: var(--clay-base);
-      border-radius: 16px;
-      padding: 8px;
-      transform-style: preserve-3d;
-      backface-visibility: visible;
+      border-radius: 16px; padding: 8px;
+      transform-style: preserve-3d; backface-visibility: visible;
       border: 1px solid rgba(255, 255, 255, 0.03);
       box-shadow:
         8px 8px 16px var(--clay-shadow),
@@ -489,126 +568,199 @@
     }
 
     .clay-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
+      width: 100%; height: 100%; object-fit: cover; border-radius: 10px;
       filter: grayscale(80%) brightness(0.55);
       transition: filter 0.4s ease;
       box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.8);
     }
 
-    .clay-card.active-card {
-      filter: drop-shadow(0 0 24px rgba(0, 191, 255, 0.22));
-      z-index: 5;
-    }
-    .clay-card.active-card img {
-      filter: grayscale(0%) brightness(1);
-    }
+    .clay-card.active-card { filter: drop-shadow(0 0 24px rgba(0, 191, 255, 0.22)); z-index: 5; }
+    .clay-card.active-card img { filter: grayscale(0%) brightness(1); }
 
     .floating-text {
-      position: absolute;
-      left: 6%;
-      top: 50%;
-      transform: translateY(-50%);
-      width: min(340px, 30vw);
-      z-index: 10;
-      pointer-events: none;
+      position: absolute; left: 6%; top: 50%; transform: translateY(-50%);
+      width: min(340px, 30vw); z-index: 10; pointer-events: none;
     }
 
     .floating-text h2 {
-      font-size: var(--fs-xl);
-      line-height: 1.1;
-      margin: 1.25rem 0 0.75rem;
-      color: var(--text-main);
-      letter-spacing: -0.035em;
+      font-size: var(--fs-xl); line-height: 1.1;
+      margin: 1.25rem 0 0.75rem; color: var(--text-main); letter-spacing: -0.035em;
     }
-
-    .floating-text p {
-      color: var(--text-muted);
-      font-size: var(--fs-sm);
-      line-height: 1.65;
-    }
+    .floating-text p { color: var(--text-muted); font-size: var(--fs-sm); line-height: 1.65; }
 
     .scroll-hint {
-      margin-top: 1.5rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: var(--fs-xs);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      opacity: 0.7;
-      animation: bob 2.4s ease-in-out infinite;
+      margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 8px;
+      font-size: var(--fs-xs); letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--text-muted); opacity: 0.7; animation: bob 2.4s ease-in-out infinite;
     }
-    @keyframes bob {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(6px); }
-    }
+    @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
 
     /* =========================================================
-       TESTIMONIALS
+       CASE STUDIES
        ========================================================= */
-    .testimonials { background: transparent; }
+    .case-study {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(1.5rem, 3vw, 2.5rem); align-items: center;
+      padding: clamp(1.75rem, 4vw, 2.75rem);
+      margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    }
+    .case-study:last-child { margin-bottom: 0; }
+    .case-study.reverse { direction: rtl; }
+    .case-study.reverse > * { direction: ltr; }
 
-    .testimonial {
-      background: var(--clay-base);
-      border-radius: clamp(16px, 2vw, 20px);
-      padding: clamp(1.75rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 2rem);
-      text-align: center;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--clay-border);
+    .case-media {
+      border-radius: 16px; overflow: hidden;
+      background: #0f0f11; border: 1px solid var(--clay-border);
       box-shadow:
-        8px 8px 20px var(--clay-shadow),
-        -4px -4px 12px rgba(255, 255, 255, 0.02),
-        inset 3px 3px 6px var(--clay-inset-light),
-        inset -3px -3px 6px var(--clay-inset-dark);
+        inset 2px 2px 5px var(--clay-inset-light),
+        inset -2px -2px 5px var(--clay-inset-dark);
+      position: relative; aspect-ratio: 16 / 10;
+    }
+    .case-media img {
+      width: 100%; height: 100%; object-fit: cover;
+      opacity: 0.85; transition: transform 0.6s ease, opacity 0.4s ease;
+    }
+    .case-study:hover .case-media img { transform: scale(1.05); opacity: 1; }
+
+    .case-body h3 { font-size: var(--fs-xl); margin-bottom: 0.4rem; letter-spacing: -0.03em; }
+    .case-tag {
+      display: inline-block; font-size: var(--fs-xs); letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem;
+    }
+    .case-block { margin-bottom: 1rem; }
+    .case-block-label {
+      font-size: var(--fs-xs); letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 0.35rem; font-weight: 600;
+    }
+    .case-block p { color: var(--text-main); font-size: var(--fs-sm); line-height: 1.7; opacity: 0.9; }
+
+    /* =========================================================
+       BEFORE / AFTER
+       ========================================================= */
+    .ba-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+      gap: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .ba-card { padding: clamp(1.25rem, 3vw, 1.75rem); }
+
+    .ba-visual {
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;
+    }
+
+    .ba-thumb {
+      aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden;
+      background: #0f0f11; position: relative; border: 1px solid var(--clay-border);
+    }
+    .ba-thumb img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(80%) brightness(0.5); }
+    .ba-thumb.after img { filter: grayscale(0%) brightness(0.9); }
+
+    .ba-label {
+      position: absolute; top: 8px; left: 8px;
+      font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 20px;
+      background: rgba(10,10,11,0.85); color: var(--text-muted);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .ba-thumb.after .ba-label { color: var(--accent); border-color: rgba(0,191,255,0.3); }
+
+    .ba-arrow {
+      color: var(--accent); font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--clay-base); border: 1px solid var(--clay-border);
+      box-shadow:
+        inset 1px 1px 2px var(--clay-inset-light),
+        inset -1px -1px 2px var(--clay-inset-dark);
+      flex-shrink: 0;
+    }
+
+    .ba-card h3 { font-size: var(--fs-md); margin-bottom: 0.75rem; }
+    .ba-list { display: flex; flex-direction: column; gap: 0.4rem; }
+    .ba-list li {
+      color: var(--text-muted); font-size: var(--fs-sm);
+      display: flex; align-items: flex-start; gap: 8px; line-height: 1.55;
+    }
+    .ba-list li::before { content: '—'; color: var(--accent); flex-shrink: 0; }
+
+    /* =========================================================
+       PROCESS
+       ========================================================= */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+      gap: clamp(1rem, 2.5vw, 1.5rem);
+      position: relative;
+    }
+
+    .process-step {
+      padding: clamp(1.5rem, 3vw, 2rem);
+      text-align: left;
       transition: transform 0.35s ease;
     }
-    .testimonial:hover { transform: translateY(-6px); }
+    .process-step:hover { transform: translateY(-6px); }
 
-    .testimonial-photo {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      margin-bottom: 1.25rem;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      object-fit: cover;
-      filter: grayscale(100%);
+    .process-num {
+      font-size: var(--fs-2xl); color: var(--accent);
+      letter-spacing: -0.05em; line-height: 1; margin-bottom: 1rem;
+      font-weight: 500; opacity: 0.85;
+    }
+    .process-step h3 {
+      font-size: var(--fs-md); margin-bottom: 0.6rem;
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .process-step p { color: var(--text-muted); font-size: var(--fs-sm); line-height: 1.65; }
+
+    /* =========================================================
+       ABOUT / FOUNDER
+       ========================================================= */
+    .founder-grid {
+      display: grid; grid-template-columns: 0.85fr 1.15fr;
+      gap: clamp(1.5rem, 4vw, 3rem); align-items: center;
+      padding: clamp(1.75rem, 4vw, 3rem);
     }
 
-    .testimonial blockquote {
-      font-style: italic;
-      margin-bottom: 1.25rem;
-      font-size: var(--fs-base);
-      color: var(--text-main);
-      line-height: 1.7;
+    .founder-photo {
+      aspect-ratio: 1; border-radius: clamp(16px, 2vw, 22px);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.12), transparent 55%),
+        linear-gradient(135deg, #1a1a1d 0%, #0f0f11 100%);
+      border: 1px solid var(--clay-border);
+      box-shadow:
+        inset 3px 3px 8px var(--clay-inset-light),
+        inset -3px -3px 8px var(--clay-inset-dark);
+      display: flex; align-items: center; justify-content: center;
+      font-size: clamp(3rem, 8vw, 5rem); color: rgba(255, 255, 255, 0.06);
+      font-weight: 500; letter-spacing: -0.05em;
+      position: relative; overflow: hidden;
+    }
+    .founder-photo::after {
+      content: ''; position: absolute; inset: 12%; border-radius: 50%;
+      border: 1px solid rgba(0, 191, 255, 0.15);
     }
 
-    .testimonial cite {
-      font-weight: 600;
-      color: var(--text-muted);
-      font-style: normal;
-      font-size: var(--fs-xs);
-      letter-spacing: 0.05em;
+    .founder-body h3 { font-size: var(--fs-xl); margin-bottom: 0.35rem; letter-spacing: -0.03em; }
+    .founder-role {
+      color: var(--accent); font-size: var(--fs-xs); letter-spacing: 0.2em;
+      text-transform: uppercase; margin-bottom: 1.25rem;
     }
+    .founder-body p { color: var(--text-muted); font-size: var(--fs-base); line-height: 1.7; margin-bottom: 1rem; }
 
-    .testimonials-pagination .swiper-pagination-bullet {
-      background: var(--text-muted);
-      opacity: 0.5;
-    }
-    .testimonials-pagination .swiper-pagination-bullet-active {
-      background: var(--text-main);
-      opacity: 1;
+    .skills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+    .skill-pill {
+      font-size: var(--fs-xs); letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.4rem 0.85rem; border-radius: 20px;
+      color: var(--text-muted); background: var(--clay-base);
+      border: 1px solid var(--clay-border);
+      box-shadow:
+        inset 1px 1px 2px var(--clay-inset-light),
+        inset -1px -1px 2px var(--clay-inset-dark);
     }
 
     /* =========================================================
-       PRICING — auto-fit grid
+       PRICING
        ========================================================= */
     .pricing-container {
       display: grid;
@@ -620,20 +772,18 @@
     }
 
     .pricing-box {
-      background: var(--clay-base);
-      border: 1px solid var(--clay-border);
+      background: var(--clay-base); border: 1px solid var(--clay-border);
       border-radius: clamp(16px, 2vw, 22px);
       padding: clamp(1.75rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 2rem);
-      text-align: center;
-      color: var(--text-main);
-      display: flex;
-      flex-direction: column;
+      text-align: left; color: var(--text-main);
+      display: flex; flex-direction: column;
       box-shadow:
         8px 8px 20px var(--clay-shadow),
         -4px -4px 12px rgba(255, 255, 255, 0.02),
         inset 3px 3px 6px var(--clay-inset-light),
         inset -3px -3px 6px var(--clay-inset-dark);
       transition: transform 0.35s ease, box-shadow 0.35s ease;
+      position: relative;
     }
     .pricing-box:hover {
       transform: translateY(-8px);
@@ -643,443 +793,356 @@
         inset 3px 3px 6px var(--clay-inset-light),
         inset -3px -3px 6px var(--clay-inset-dark);
     }
+    .pricing-box.featured { border-color: rgba(0, 191, 255, 0.25); }
 
     .pricing-box h3 {
-      font-size: var(--fs-lg);
-      margin-bottom: 1rem;
+      font-size: var(--fs-md); margin-bottom: 0.25rem;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--text-muted); font-weight: 500;
     }
-
     .pricing-box .price {
-      font-size: clamp(2rem, 5vw, 2.4rem);
-      font-weight: 500;
-      letter-spacing: -0.04em;
-      margin-bottom: 1.5rem;
-      color: var(--text-main);
+      font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 500;
+      letter-spacing: -0.04em; margin-bottom: 0.4rem; color: var(--text-main);
+    }
+    .pricing-box .price-note {
+      color: var(--text-muted); font-size: var(--fs-xs);
+      margin-bottom: 1.5rem; letter-spacing: 0.02em;
     }
 
-    .pricing-box p {
-      font-size: var(--fs-sm);
-      margin-bottom: 0.7rem;
-      color: var(--text-muted);
+    .pricing-list { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.75rem; flex-grow: 1; }
+    .pricing-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: var(--fs-sm); color: var(--text-muted); line-height: 1.55;
     }
+    .pricing-list li i { color: var(--accent); font-size: 0.7rem; margin-top: 5px; flex-shrink: 0; }
 
-    .pricing-box .chunky-btn {
-      margin-top: 1.5rem;
-      width: 100%;
+    .pricing-box .chunky-btn { width: 100%; margin-top: auto; }
+
+    .pricing-footnote {
+      text-align: center; color: var(--text-muted); font-size: var(--fs-xs);
+      margin-top: 2rem; letter-spacing: 0.02em;
     }
 
     /* =========================================================
-       STATS
+       QUOTE CALCULATOR
        ========================================================= */
-    .stats-container {
+    .calc-container {
+      max-width: 680px; margin: 0 auto;
+      padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.25rem, 3.5vw, 2.5rem);
+      border-radius: clamp(18px, 2vw, 22px);
+    }
+
+    .calc-progress { display: flex; gap: 6px; margin-bottom: 2rem; }
+    .calc-progress span {
+      flex: 1; height: 3px; border-radius: 3px;
+      background: rgba(255, 255, 255, 0.06); transition: background 0.3s ease;
+    }
+    .calc-progress span.done,
+    .calc-progress span.active { background: var(--accent); }
+
+    .calc-step { display: none; animation: fadeIn 0.3s ease; }
+    .calc-step.active { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .calc-step-label {
+      font-size: var(--fs-xs); letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.5rem;
+    }
+    .calc-step h3 { font-size: var(--fs-lg); margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+
+    .calc-options {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+      gap: 0.75rem; margin-bottom: 1.5rem;
+    }
+
+    .calc-option {
+      display: flex; align-items: center; gap: 10px;
+      padding: 0.9rem 1rem; border-radius: 14px;
+      background: #0f0f11; border: 1px solid rgba(255, 255, 255, 0.05);
+      cursor: pointer; font-size: var(--fs-sm); color: var(--text-main);
+      transition: border-color 0.2s ease, background 0.2s ease;
+      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.6);
+      min-height: 44px;
+    }
+    .calc-option:hover { border-color: rgba(0, 191, 255, 0.3); }
+    .calc-option input { accent-color: var(--accent); width: 16px; height: 16px; flex-shrink: 0; }
+    .calc-option.selected { border-color: var(--accent); background: rgba(0, 191, 255, 0.04); }
+
+    .calc-nav { display: flex; justify-content: space-between; gap: 0.75rem; margin-top: 1rem; }
+
+    .calc-result {
+      text-align: center; padding: clamp(1.5rem, 3vw, 2rem);
+      border-radius: 18px; background: #0f0f11;
+      border: 1px solid rgba(0, 191, 255, 0.15);
+      margin-bottom: 1.5rem;
+      box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.7);
+    }
+    .calc-result-label {
+      font-size: var(--fs-xs); letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 0.5rem;
+    }
+    .calc-result-price {
+      font-size: clamp(2rem, 5vw, 2.6rem); color: var(--accent);
+      letter-spacing: -0.04em; font-weight: 500;
+    }
+    .calc-result-note { font-size: var(--fs-xs); color: var(--text-muted); margin-top: 0.75rem; line-height: 1.5; }
+
+    .calc-summary {
+      background: #0f0f11; border-radius: 14px; padding: 1.25rem;
+      margin-bottom: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.04);
+      text-align: left;
+    }
+    .calc-summary h4 {
+      font-size: var(--fs-xs); letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 0.85rem; font-weight: 600;
+    }
+    .calc-summary-row {
+      display: flex; justify-content: space-between; gap: 1rem;
+      font-size: var(--fs-sm); padding: 0.4rem 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.04);
+      color: var(--text-main);
+    }
+    .calc-summary-row:last-child { border-bottom: none; }
+    .calc-summary-row span:first-child { color: var(--text-muted); }
+
+    /* =========================================================
+       WHAT YOU CAN EXPECT
+       ========================================================= */
+    .expect-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
       gap: clamp(1rem, 2.5vw, 1.5rem);
-      max-width: 900px;
-      margin: 0 auto;
     }
 
-    .stat {
-      text-align: center;
-      padding: clamp(1.5rem, 3.5vw, 2.25rem) clamp(1rem, 2.5vw, 1.75rem);
-      border-radius: clamp(16px, 2vw, 22px);
-      background: var(--clay-base);
-      border: 1px solid var(--clay-border);
-      box-shadow:
-        8px 8px 20px var(--clay-shadow),
-        -4px -4px 12px rgba(255, 255, 255, 0.02),
-        inset 3px 3px 6px var(--clay-inset-light),
-        inset -3px -3px 6px var(--clay-inset-dark);
+    .expect-card {
+      padding: clamp(1.5rem, 3vw, 2rem);
       transition: transform 0.35s ease;
+      display: flex; flex-direction: column; gap: 0.75rem;
     }
-    .stat:hover { transform: translateY(-6px); }
-
-    .stat-number {
-      font-size: clamp(2rem, 6vw, 3rem);
-      font-weight: 500;
-      color: var(--accent);
-      letter-spacing: -0.05em;
-      margin-bottom: 0.25rem;
-    }
-
-    .stat-label {
-      font-size: var(--fs-xs);
-      color: var(--text-muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
+    .expect-card:hover { transform: translateY(-6px); }
+    .expect-card i { color: var(--accent); font-size: 1.35rem; }
+    .expect-card h3 { font-size: var(--fs-md); letter-spacing: -0.02em; }
+    .expect-card p { color: var(--text-muted); font-size: var(--fs-sm); line-height: 1.65; }
 
     /* =========================================================
        FAQ
        ========================================================= */
     .faq-container { max-width: 780px; margin: 0 auto; }
-
     .faq-item { margin-bottom: 1rem; }
 
     .faq-question {
-      width: 100%;
-      text-align: left;
-      background: var(--clay-base);
-      border: 1px solid var(--clay-border);
-      color: var(--text-main);
-      font-weight: 500;
+      width: 100%; text-align: left;
+      background: var(--clay-base); border: 1px solid var(--clay-border);
+      color: var(--text-main); font-weight: 500;
       padding: clamp(1rem, 2.5vw, 1.4rem) clamp(1rem, 3vw, 1.6rem);
-      cursor: pointer;
-      border-radius: clamp(14px, 2vw, 18px);
-      transition: all 0.25s ease;
-      font-size: var(--fs-base);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: inherit;
-      gap: 1rem;
+      cursor: pointer; border-radius: clamp(14px, 2vw, 18px);
+      transition: all 0.25s ease; font-size: var(--fs-base);
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: inherit; gap: 1rem;
       box-shadow:
         6px 6px 16px var(--clay-shadow),
         -3px -3px 10px rgba(255, 255, 255, 0.02),
         inset 2px 2px 5px var(--clay-inset-light),
         inset -2px -2px 5px var(--clay-inset-dark);
     }
-
     .faq-question::after {
-      content: '+';
-      font-size: 1.4rem;
-      transition: transform 0.3s ease;
-      color: var(--text-muted);
-      flex-shrink: 0;
+      content: '+'; font-size: 1.4rem;
+      transition: transform 0.3s ease; color: var(--text-muted); flex-shrink: 0;
     }
-
-    .faq-question.active::after {
-      content: '−';
-      color: var(--accent);
-    }
-
+    .faq-question.active::after { content: '−'; color: var(--accent); }
     .faq-question:hover { color: var(--text-main); }
 
     .faq-answer {
-      display: none;
-      padding: 1.4rem 1.6rem;
-      color: var(--text-muted);
-      font-size: var(--fs-sm);
-      line-height: 1.7;
+      display: none; padding: 1.4rem 1.6rem;
+      color: var(--text-muted); font-size: var(--fs-sm); line-height: 1.7;
       border-left: 2px solid rgba(255, 255, 255, 0.05);
       margin: 0.5rem 0 0 1rem;
     }
 
     /* =========================================================
-       CALCULATOR
+       FINAL CTA
        ========================================================= */
-    .calculator-container {
-      max-width: 520px;
-      margin: 0 auto;
-      padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.25rem, 3.5vw, 2.25rem);
-      text-align: center;
-      border-radius: clamp(18px, 2vw, 22px);
-    }
-
-    .calculator-container h2 {
-      margin-bottom: 2rem;
-      font-size: var(--fs-lg);
-    }
-
-    .calculator-container form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      text-align: left;
-    }
-
-    .calculator-container label {
-      font-weight: 500;
-      font-size: var(--fs-xs);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-
-    .calculator-container select,
-    .booking-container input,
-    .booking-container select,
-    .booking-container textarea {
-      width: 100%;
-      padding: 0.85rem 1rem;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      background: #0f0f11;
-      color: var(--text-main);
-      font-size: var(--fs-sm);
-      font-family: inherit;
-      outline: none;
-      transition: border-color 0.25s ease, box-shadow 0.25s ease;
-      box-shadow:
-        inset 3px 3px 6px rgba(0, 0, 0, 0.7),
-        inset -1px -1px 3px rgba(255, 255, 255, 0.02);
-    }
-
-    .calculator-container select:focus,
-    .booking-container input:focus,
-    .booking-container select:focus,
-    .booking-container textarea:focus {
-      border-color: rgba(0, 191, 255, 0.5);
-      box-shadow:
-        inset 3px 3px 6px rgba(0, 0, 0, 0.7),
-        0 0 0 3px rgba(0, 191, 255, 0.08);
-    }
-
-    .features {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .features label {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      font-weight: 400;
-      font-size: var(--fs-sm);
-      letter-spacing: 0;
-      text-transform: none;
-      color: var(--text-main);
-      cursor: pointer;
-      padding: 0.7rem 1rem;
-      border-radius: 12px;
-      background: #0f0f11;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      transition: border-color 0.2s ease;
-      margin-bottom: 0;
-      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.6);
-    }
-    .features label:hover { border-color: rgba(0, 191, 255, 0.3); }
-
-    .features input[type="checkbox"] {
-      cursor: pointer;
-      accent-color: var(--accent);
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-    }
-
-    .result {
-      margin-top: 1.25rem;
-      font-size: var(--fs-md);
-      font-weight: 500;
-      padding: 1.1rem;
-      border-radius: 16px;
-      background: #0f0f11;
-      color: var(--text-main);
-      letter-spacing: -0.02em;
-      box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.7);
-      border: 1px solid rgba(0, 191, 255, 0.15);
-    }
-
-    /* =========================================================
-       BOOKING
-       ========================================================= */
-    .booking-container {
-      max-width: 620px;
-      margin: 0 auto;
-      padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.25rem, 3.5vw, 2.5rem);
-      border-radius: clamp(18px, 2vw, 22px);
-    }
-
-    .booking-container form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .booking-container label {
-      font-weight: 500;
-      font-size: var(--fs-xs);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-
-    .booking-container textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    /* Validation */
-    .form-group { position: relative; }
-
-    .error-message {
-      color: #ff6b6b;
-      font-size: var(--fs-xs);
-      margin-top: 0.4rem;
-      display: none;
-    }
-
-    input.error, select.error, textarea.error {
-      border-color: #ff6b6b !important;
-    }
-
-    .success-message {
-      background-color: rgba(46, 204, 113, 0.08);
-      border: 1px solid rgba(46, 204, 113, 0.4);
-      color: #2ecc71;
-      padding: 1rem;
-      border-radius: 14px;
-      font-size: var(--fs-sm);
-      margin-top: 0.5rem;
-      display: none;
-    }
-
-    /* =========================================================
-       CONTACT
-       ========================================================= */
-    #contact { text-align: center; padding-bottom: var(--section-y); }
-
-    .social-icons {
-      margin-top: var(--space-lg);
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: clamp(0.75rem, 2vw, 1.25rem);
-    }
-
-    .social-icons a {
-      font-size: clamp(1.1rem, 2vw, 1.25rem);
-      color: var(--text-main);
-      width: clamp(50px, 10vw, 60px);
-      height: clamp(50px, 10vw, 60px);
-      border-radius: clamp(16px, 2vw, 20px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--clay-base);
-      border: 1px solid var(--clay-border);
-      box-shadow:
-        6px 6px 14px var(--clay-shadow),
-        -3px -3px 8px rgba(255, 255, 255, 0.02),
-        inset 2px 2px 5px var(--clay-inset-light),
-        inset -2px -2px 5px var(--clay-inset-dark);
-      transition: transform 0.25s ease, color 0.25s ease;
-    }
-    .social-icons a:hover {
-      color: var(--accent);
-      transform: translateY(-5px);
-    }
-
-    /* =========================================================
-       JOURNEY / FINAL CTA
-       ========================================================= */
-    .journey-section {
-      position: relative;
-      min-height: 80svh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      background: radial-gradient(circle at center, #131316 0%, var(--bg-dark) 70%);
-      padding: var(--section-y) clamp(1rem, 3vw, 1.5rem);
-    }
-
-    .journey-content {
-      text-align: center;
-      z-index: 2;
-      padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    .final-cta {
+      padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 3vw, 2rem);
       border-radius: clamp(20px, 3vw, 26px);
-      max-width: 620px;
-      width: 100%;
-      background: rgba(24, 24, 27, 0.75);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(0, 191, 255, 0.08), transparent 60%),
+        var(--clay-base);
       border: 1px solid var(--clay-border);
       box-shadow:
         12px 12px 30px var(--clay-shadow),
         -4px -4px 14px rgba(255, 255, 255, 0.02),
         inset 3px 3px 6px var(--clay-inset-light),
         inset -3px -3px 6px var(--clay-inset-dark);
+      max-width: 900px; margin: 0 auto;
+    }
+    .final-cta h2 {
+      font-size: var(--fs-2xl); letter-spacing: -0.04em;
+      margin: 1rem 0 0.85rem; text-transform: uppercase;
+    }
+    .final-cta p {
+      color: var(--text-muted); max-width: 520px;
+      margin: 0 auto 2rem; font-size: var(--fs-md); line-height: 1.6;
+    }
+    .final-cta-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+
+    /* =========================================================
+       CONTACT
+       ========================================================= */
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.3fr;
+      gap: clamp(1.5rem, 4vw, 2.5rem);
+      max-width: 1000px; margin: 0 auto;
     }
 
-    .journey-content h2 {
-      font-size: var(--fs-xl);
-      margin: 1rem 0 0.75rem;
-      color: var(--text-main);
+    .contact-side { display: flex; flex-direction: column; gap: 0.85rem; }
+
+    .contact-item {
+      display: flex; align-items: center; gap: 14px;
+      padding: 1rem 1.15rem; border-radius: 14px;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+      background: var(--clay-base); border: 1px solid var(--clay-border);
+      box-shadow:
+        4px 4px 12px var(--clay-shadow),
+        inset 1px 1px 2px var(--clay-inset-light),
+        inset -1px -1px 2px var(--clay-inset-dark);
+    }
+    .contact-item:hover { transform: translateY(-3px); border-color: rgba(0, 191, 255, 0.25); }
+    .contact-item i {
+      width: 42px; height: 42px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      background: #0f0f11; color: var(--accent); font-size: 1rem;
+      flex-shrink: 0; box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    .contact-item-body { display: flex; flex-direction: column; min-width: 0; }
+    .contact-item-label {
+      font-size: var(--fs-xs); letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 2px;
+    }
+    .contact-item-value {
+      font-size: var(--fs-sm); color: var(--text-main);
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     }
 
-    .journey-content p {
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-      font-size: var(--fs-base);
+    .contact-form { padding: clamp(1.5rem, 3.5vw, 2.25rem); border-radius: clamp(18px, 2vw, 22px); }
+    .contact-form form { display: flex; flex-direction: column; gap: 1rem; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { position: relative; }
+
+    .form-group label {
+      font-weight: 500; font-size: var(--fs-xs); letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--text-muted);
+      margin-bottom: 0.5rem; display: block;
     }
 
-    .constellation {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 1;
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; padding: 0.85rem 1rem; border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: #0f0f11; color: var(--text-main);
+      font-size: var(--fs-sm); font-family: inherit; outline: none;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+      box-shadow:
+        inset 3px 3px 6px rgba(0, 0, 0, 0.7),
+        inset -1px -1px 3px rgba(255, 255, 255, 0.02);
     }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: rgba(0, 191, 255, 0.5);
+      box-shadow:
+        inset 3px 3px 6px rgba(0, 0, 0, 0.7),
+        0 0 0 3px rgba(0, 191, 255, 0.08);
+    }
+    .form-group textarea { min-height: 120px; resize: vertical; }
 
-    .constellation-card {
-      position: absolute;
-      width: 100px;
-      height: 140px;
-      opacity: 0.35;
-      left: auto;
-      top: auto;
+    .error-message { color: #ff6b6b; font-size: var(--fs-xs); margin-top: 0.4rem; display: none; }
+    input.error, select.error, textarea.error { border-color: #ff6b6b !important; }
+
+    .success-message {
+      background-color: rgba(46, 204, 113, 0.08);
+      border: 1px solid rgba(46, 204, 113, 0.4);
+      color: #2ecc71; padding: 1rem; border-radius: 14px;
+      font-size: var(--fs-sm); margin-top: 0.5rem; display: none;
     }
 
     /* =========================================================
        FOOTER
        ========================================================= */
     footer {
-      padding: clamp(1.75rem, 4vw, 2.5rem) 1rem;
-      text-align: center;
+      padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(1.75rem, 3vw, 2.5rem);
       border-top: 1px solid rgba(255, 255, 255, 0.04);
-      color: var(--text-muted);
-      font-size: var(--fs-xs);
-      padding-bottom: calc(clamp(1.75rem, 4vw, 2.5rem) + env(safe-area-inset-bottom));
+      color: var(--text-muted); font-size: var(--fs-sm);
+      padding-bottom: calc(clamp(1.75rem, 3vw, 2.5rem) + env(safe-area-inset-bottom));
+    }
+
+    .footer-grid {
+      display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 2rem;
+    }
+
+    .footer-brand { display: flex; flex-direction: column; gap: 0.85rem; }
+    .footer-brand img { height: 56px; width: auto; max-width: 200px; object-fit: contain; }
+    .footer-brand p { color: var(--text-muted); font-size: var(--fs-sm); line-height: 1.6; max-width: 260px; }
+
+    .footer-col h4 {
+      font-size: var(--fs-xs); letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--text-main); margin-bottom: 1rem; font-weight: 600;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.55rem; }
+    .footer-col a { color: var(--text-muted); font-size: var(--fs-sm); transition: color 0.2s ease; }
+    .footer-col a:hover { color: var(--accent); }
+
+    .footer-social { display: flex; gap: 0.6rem; margin-top: 0.5rem; }
+    .footer-social a {
+      width: 40px; height: 40px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--clay-base); border: 1px solid var(--clay-border);
+      color: var(--text-main); font-size: 0.9rem;
+      box-shadow:
+        inset 1px 1px 2px var(--clay-inset-light),
+        inset -1px -1px 2px var(--clay-inset-dark);
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .footer-social a:hover { color: var(--accent); transform: translateY(-3px); }
+
+    .footer-bottom {
+      padding-top: 1.75rem; border-top: 1px solid rgba(255, 255, 255, 0.04);
+      display: flex; flex-wrap: wrap; justify-content: space-between;
+      align-items: center; gap: 1rem; font-size: var(--fs-xs); color: var(--text-muted);
     }
 
     /* =========================================================
        FLOATING BUTTONS
        ========================================================= */
     .whatsapp-float {
-      position: fixed;
-      bottom: calc(90px + env(safe-area-inset-bottom));
+      position: fixed; bottom: calc(90px + env(safe-area-inset-bottom));
       right: clamp(12px, 2vw, 22px);
-      background: #25d366;
-      color: #fff;
-      border-radius: 16px;
-      padding: 12px 14px;
-      font-size: 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      min-width: 48px;
-      min-height: 48px;
-      box-shadow:
-        0px 4px 0px #128c3e,
-        0px 8px 18px rgba(0, 0, 0, 0.5);
+      background: #25d366; color: #fff; border-radius: 16px;
+      padding: 12px 14px; font-size: 1.25rem;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 9999; min-width: 48px; min-height: 48px;
+      box-shadow: 0px 4px 0px #128c3e, 0px 8px 18px rgba(0, 0, 0, 0.5);
       transition: transform 0.25s ease;
     }
     .whatsapp-float:hover { transform: translateY(-4px) scale(1.05); color: #fff; }
-    .whatsapp-float:active { transform: translateY(2px); box-shadow: 0px 2px 0px #128c3e, 0px 4px 10px rgba(0,0,0,0.5); }
 
     .sticky-contact-btn {
-      position: fixed;
-      bottom: calc(20px + env(safe-area-inset-bottom));
+      position: fixed; bottom: calc(20px + env(safe-area-inset-bottom));
       right: clamp(12px, 2vw, 22px);
-      background: var(--text-main);
-      color: var(--bg-dark);
-      padding: 12px 18px;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: var(--fs-xs);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      z-index: 9999;
-      font-family: inherit;
-      min-height: 48px;
+      background: var(--text-main); color: var(--bg-dark);
+      padding: 12px 18px; border-radius: 40px;
+      font-weight: 600; font-size: var(--fs-xs);
+      display: flex; align-items: center; gap: 8px;
+      z-index: 9999; min-height: 48px;
       box-shadow:
         0px 4px 0px rgba(161, 161, 170, 0.5),
         0px 8px 18px rgba(0, 0, 0, 0.55),
@@ -1088,247 +1151,125 @@
       transition: transform 0.25s ease, background 0.25s ease;
     }
     .sticky-contact-btn:hover { background: var(--accent); color: var(--bg-dark); }
-    .sticky-contact-btn:active { transform: translateY(4px); box-shadow: 0px 0px 0px rgba(161,161,170,0.5), 0px 2px 5px rgba(0,0,0,0.4); }
 
-    /* =========================================================
-       LOADING SPINNER
-       ========================================================= */
     .loading-spinner {
-      display: none;
-      width: 34px;
-      height: 34px;
-      margin: 12px auto;
-      border: 3px solid rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
+      display: none; width: 34px; height: 34px; margin: 12px auto;
+      border: 3px solid rgba(255, 255, 255, 0.1); border-radius: 50%;
       border-top-color: var(--accent);
       animation: spin 0.9s linear infinite;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
     /* =========================================================
-       RESPONSIVE — Mobile nav & sphere scaling
+       RESPONSIVE
        ========================================================= */
-
-    /* Tablet & below — collapse nav into a dropdown */
-    @media (max-width: 1024px) {
-      .nav-links a { font-size: 0.72rem; padding: 0.45rem 0.7rem; }
-      .floating-text { left: 4%; width: min(280px, 34vw); }
-    }
-
-    /* Nav dropdown kicks in earlier because there are 9 links */
     @media (max-width: 1100px) {
       .menu-btn { display: inline-flex; }
-
       .nav-links {
-        position: absolute;
-        top: calc(100% + 8px);
-        right: clamp(0.75rem, 2vw, 1.25rem);
-        left: auto;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 0.75rem;
-        border-radius: 20px;
+        position: absolute; top: calc(100% + 8px);
+        right: clamp(0.75rem, 2vw, 1.25rem); left: auto;
+        flex-direction: column; align-items: stretch;
+        padding: 0.75rem; border-radius: 20px;
         width: min(260px, calc(100vw - 1.5rem));
-        gap: 0.15rem;
-        opacity: 0;
-        visibility: hidden;
+        gap: 0.15rem; opacity: 0; visibility: hidden;
         transform: translateY(-12px);
         transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-        max-height: calc(100vh - 100px);
-        overflow-y: auto;
+        max-height: calc(100vh - 100px); overflow-y: auto;
         box-shadow:
           0 20px 40px rgba(0,0,0,0.6),
           inset 1px 1px 2px var(--clay-inset-light),
           inset -1px -1px 2px var(--clay-inset-dark);
       }
-      .nav-links.open {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-      }
+      .nav-links.open { opacity: 1; visibility: visible; transform: translateY(0); }
       .nav-links a {
-        padding: 0.75rem 1rem;
-        font-size: 0.85rem;
-        border-radius: 14px;
-        min-height: 44px;
-        display: flex;
-        align-items: center;
+        padding: 0.75rem 1rem; font-size: 0.85rem;
+        border-radius: 14px; min-height: 44px; display: flex; align-items: center;
       }
     }
 
-    /* Tablet portrait */
+    @media (max-width: 960px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-copy { text-align: center; align-items: center; }
+      .hero h1 { text-align: center; }
+      .hero-visual { max-width: 520px; }
+      .hero-actions { justify-content: center; }
+      .hero-trust { justify-content: center; }
+      .case-study { grid-template-columns: 1fr; }
+      .case-study.reverse { direction: ltr; }
+      .founder-grid { grid-template-columns: 1fr; }
+      .founder-photo { max-width: 280px; margin: 0 auto; }
+      .founder-body { text-align: center; }
+      .skills { justify-content: center; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+      .floating-text { left: 4%; width: min(280px, 34vw); }
+    }
+
     @media (max-width: 900px) {
       .gallery-wrap { height: 260vh; }
-
-      .clay-card {
-        width: 120px;
-        height: 165px;
-        left: -60px;
-        top: -82px;
-      }
-
+      .clay-card { width: 120px; height: 165px; left: -60px; top: -82px; }
       .floating-text {
-        left: 6%;
-        right: 6%;
-        width: auto;
-        top: auto;
-        bottom: 6%;
-        transform: none;
-        text-align: center;
-        pointer-events: auto;
-        max-width: 520px;
-        margin: 0 auto;
+        left: 6%; right: 6%; width: auto;
+        top: auto; bottom: 6%; transform: none;
+        text-align: center; pointer-events: auto;
+        max-width: 520px; margin: 0 auto;
       }
-
       .floating-text h2 { font-size: 1.5rem; }
-
-      .hero-actions .chunky-btn { min-width: 160px; }
     }
 
-    /* Large phones / small tablets */
     @media (max-width: 640px) {
-      .hero { padding-top: clamp(6rem, 18vw, 8rem); }
-
-      .hero-actions {
-        flex-direction: column;
-        width: 100%;
-        max-width: 340px;
-      }
-      .hero-actions .chunky-btn { width: 100%; min-width: 0; }
-
       .gallery-wrap { height: 220vh; }
-
-      .clay-card {
-        width: 100px;
-        height: 140px;
-        left: -50px;
-        top: -70px;
-      }
-
-      .floating-text {
-        bottom: 5%;
-        padding: 0 0.5rem;
-      }
+      .clay-card { width: 100px; height: 140px; left: -50px; top: -70px; }
+      .floating-text { bottom: 5%; padding: 0 0.5rem; }
       .floating-text h2 { font-size: 1.25rem; }
       .floating-text p { font-size: 0.8rem; }
       .scroll-hint { font-size: 0.62rem; margin-top: 0.75rem; }
-
       .constellation-card { width: 70px; height: 100px; }
-
-      .journey-section { min-height: 70svh; }
-
-      .stats-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .stats-container .stat:last-child {
-        grid-column: 1 / -1;
-      }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .calc-options { grid-template-columns: 1fr; }
+      .calc-nav { flex-direction: column; }
+      .calc-nav .chunky-btn { width: 100%; }
+      .ba-visual { grid-template-columns: 1fr; }
+      .ba-arrow { transform: rotate(90deg); margin: 0 auto; }
     }
 
-    /* Small phones (375px & below) */
     @media (max-width: 420px) {
-      .logo span { display: none; }
-
-      .hero h1 { font-size: clamp(1.8rem, 9vw, 2.4rem); }
-
+      .logo img { height: 40px; max-width: 150px; }
+      .hero h1 { font-size: clamp(1.7rem, 8.5vw, 2.2rem); }
       .section-title { font-size: clamp(1.5rem, 7vw, 2rem); }
-
-      .chunky-badge {
-        font-size: 0.62rem;
-        padding: 0.4rem 0.75rem;
-        letter-spacing: 0.1em;
-      }
-
-      .pricing-container {
-        grid-template-columns: 1fr;
-      }
-
-      .stats-container {
-        grid-template-columns: 1fr;
-      }
-      .stats-container .stat:last-child { grid-column: auto; }
-
-      .social-icons a {
-        width: 46px;
-        height: 46px;
-        font-size: 1rem;
-      }
-
-      .sticky-contact-btn {
-        padding: 10px 14px;
-        font-size: 0.72rem;
-      }
-      .sticky-contact-btn i { font-size: 0.9rem; }
-
-      .whatsapp-float {
-        padding: 10px 12px;
-        font-size: 1.05rem;
-        min-width: 44px;
-        min-height: 44px;
-      }
-
-      .faq-answer { padding: 1rem 1rem; font-size: 0.82rem; margin-left: 0.5rem; }
+      .chunky-badge { font-size: 0.62rem; padding: 0.4rem 0.75rem; }
+      .nav-cta { padding: 0.55rem 0.9rem; font-size: 0.62rem; }
+      .pricing-container { grid-template-columns: 1fr; }
+      .footer-brand img { height: 44px; }
     }
 
-    /* Tiny screens (320px) */
     @media (max-width: 360px) {
-      :root {
-        --space-lg: 1.5rem;
-        --section-y: 3rem;
-      }
-
-      .logo img { height: 32px; max-width: 100px; }
-
-      .hero { padding-top: 5.5rem; }
-
-      .chunky-btn {
-        font-size: 0.78rem;
-        padding: 0.7rem 1.1rem;
-      }
-
-      .booking-container,
-      .calculator-container,
-      .owner-card {
-        padding: 1.25rem 1rem;
-      }
+      :root { --space-lg: 1.5rem; --section-y: 3rem; }
+      .logo img { height: 36px; max-width: 130px; }
+      .chunky-btn { font-size: 0.78rem; padding: 0.7rem 1.1rem; }
     }
 
-    /* Landscape phones */
     @media (max-height: 500px) and (orientation: landscape) {
-      .hero {
-        min-height: auto;
-        padding-top: 5rem;
-        padding-bottom: 3rem;
-      }
-
+      .hero { min-height: auto; padding-top: 5rem; padding-bottom: 3rem; }
       .scene { height: 120svh; }
-
       .gallery-wrap { height: 200vh; }
     }
 
-    /* Ultrawide screens */
-    @media (min-width: 1600px) {
-      .container { max-width: 1300px; }
-    }
-    @media (min-width: 1920px) {
-      .container { max-width: 1400px; }
-      .hero h1 { max-width: 1100px; }
-    }
+    @media (min-width: 1600px) { .container { max-width: 1300px; } }
+    @media (min-width: 1920px) { .container { max-width: 1400px; } }
 
-    /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .gallery-wrap { height: auto; padding: 5rem 0; }
       .scene { position: relative; height: auto; }
       .sphere { display: none; }
       .floating-text {
-        position: relative;
-        left: auto; top: auto; bottom: auto; right: auto;
-        transform: none;
-        margin: 0 auto;
-        text-align: center;
-        pointer-events: auto;
-        width: 90%;
+        position: relative; left: auto; top: auto; bottom: auto; right: auto;
+        transform: none; margin: 0 auto; text-align: center;
+        pointer-events: auto; width: 90%;
       }
       .scroll-hint { display: none; }
       *, *::before, *::after {
@@ -1345,92 +1286,212 @@
        NAVBAR
        ============================= -->
   <nav class="navbar" id="mainHeader">
-    <a href="#home" class="logo">
-      <img src="https://i.postimg.cc/SQJHd3P3/FF369872-B995-4943-8981-FDB5859BE291.png" alt="JayWebs Logo">
-     
+    <a href="#home" class="logo" aria-label="JayWebs home">
+      <img src="https://i.postimg.cc/SQJHd3P3/FF369872-B995-4943-8981-FDB5859BE291.png" alt="JayWebs logo">
     </a>
 
     <ul class="nav-links" id="mainNav">
       <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#portfolio">Work</a></li>
-      <li><a href="#testimonials">Feedback</a></li>
-      <li><a href="#pricing">Services</a></li>
-      <li><a href="#impact">Impact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#pricing">Pricing</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#quote">Quote</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <button class="menu-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu">
-      <i class="fas fa-bars"></i>
-    </button>
+    <div class="nav-actions">
+      <button class="chunky-btn nav-cta" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">
+        Get a Quote
+      </button>
+      <button class="menu-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
   </nav>
 
   <!-- =============================
        HERO
        ============================= -->
   <section class="hero" id="home">
-    <span class="chunky-badge" data-aos="fade-up">Futuristic Web Design · South Africa</span>
-    <h1 data-aos="fade-up" data-aos-delay="100">Build a powerful online presence.</h1>
-    <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
-      Luxury, tech, and performance combined — JayWebs crafts websites that move brands forward.
-    </p>
-    <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
-      <button class="chunky-btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
-        Book a Consultation <i class="fas fa-arrow-right"></i>
-      </button>
-      <button class="chunky-btn ghost" onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">
-        View Our Work
-      </button>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="chunky-badge" data-aos="fade-up">Web Design & Development · South Africa</span>
+        <h1 data-aos="fade-up" data-aos-delay="100">
+          We build websites that make businesses look serious.
+        </h1>
+        <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
+          Modern, responsive websites designed to help businesses build credibility, attract customers and grow online.
+        </p>
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+          <button class="chunky-btn" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">
+            Get a Free Quote <i class="fas fa-arrow-right"></i>
+          </button>
+          <button class="chunky-btn ghost" onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">
+            View Our Work
+          </button>
+        </div>
+        <div class="hero-trust" data-aos="fade-up" data-aos-delay="400">
+          <span><i class="fas fa-map-marker-alt"></i> Based in South Africa</span>
+          <span><i class="fas fa-code"></i> Custom Websites</span>
+          <span><i class="fas fa-mobile-alt"></i> Mobile Responsive</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-aos="fade-up" data-aos-delay="300" aria-hidden="true">
+        <div class="browser-mock">
+          <div class="browser-bar">
+            <span class="browser-dot accent"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-dot"></span>
+            <span class="browser-url">jaywebs.site</span>
+          </div>
+          <div class="browser-body">
+            <div class="mock-nav">
+              <div class="mock-nav-bar"></div>
+              <div class="mock-nav-links">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="mock-hero">
+              <div class="mock-hero-left">
+                <div class="mock-line-lg"></div>
+                <div class="mock-line-md"></div>
+                <div class="mock-line-sm"></div>
+                <div class="mock-btn"></div>
+              </div>
+              <div class="mock-hero-right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- =============================
-       ABOUT
+       TRUST STRIP
        ============================= -->
-  <section class="section-padding" id="about">
+  <section class="trust-strip" aria-label="Our standards">
+    <div class="container">
+      <div class="trust-strip-inner">
+        <span class="trust-item"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+        <span class="trust-item"><i class="fas fa-search"></i> SEO Ready</span>
+        <span class="trust-item"><i class="fas fa-desktop"></i> Mobile First</span>
+        <span class="trust-item"><i class="fas fa-bolt"></i> Fast Performance</span>
+        <span class="trust-item"><i class="fas fa-code"></i> Custom Built</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       SERVICES
+       ============================= -->
+  <section class="section-padding" id="services">
     <div class="container">
       <div class="section-head" data-aos="fade-up">
-        <span class="chunky-badge">About JayWebs</span>
-        <h2 class="section-title">Where digital dreams become stunning realities.</h2>
+        <span class="chunky-badge">Services</span>
+        <h2 class="section-title">What we build</h2>
+        <p class="section-sub">Digital experiences designed around your business.</p>
       </div>
 
-      <p class="about-text" data-aos="fade-up" data-aos-delay="100">
-        JayWebs is a premium web design and development agency based in South Africa, specializing in creating luxurious,
-        high-performing, and user-friendly websites. Our mission is to bring your digital vision to life with cutting-edge
-        design, flawless functionality, and results-driven strategies. We believe in innovation, attention to detail,
-        and delivering beyond expectations.
-      </p>
+      <div class="services-grid">
+        <article class="service-card clay" data-aos="fade-up" data-aos-delay="50">
+          <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>Business Websites</h3>
+          <p>Professional websites for companies, entrepreneurs and service providers.</p>
+          <a href="#quote" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </article>
 
-      <p class="about-quote" data-aos="fade-up" data-aos-delay="150">
-        "Fuel your brand. Power your presence."
-      </p>
+        <article class="service-card clay" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon"><i class="fas fa-shopping-bag"></i></div>
+          <h3>E-Commerce</h3>
+          <p>Modern online stores designed to showcase products and make purchasing simple.</p>
+          <a href="#quote" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </article>
 
-      <div class="owner-card clay" data-aos="fade-up" data-aos-delay="200">
-        <h3>Meet the Visionary</h3>
-        <h4>Jaden Nkuna</h4>
-        <p>
-          Jaden is the creative force behind JayWebs, with years of experience in web design, branding, and digital
-          marketing. His passion for excellence and eye for detail ensure that every JayWebs project stands out as a
-          masterpiece in the online world.
-        </p>
+        <article class="service-card clay" data-aos="fade-up" data-aos-delay="150">
+          <div class="service-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Landing Pages</h3>
+          <p>Focused pages designed for campaigns, products and lead generation.</p>
+          <a href="#quote" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card clay" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+          <h3>Website Redesigns</h3>
+          <p>Transform outdated websites into modern, responsive digital experiences.</p>
+          <a href="#quote" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card clay" data-aos="fade-up" data-aos-delay="250">
+          <div class="service-icon"><i class="fas fa-cogs"></i></div>
+          <h3>Custom Web Applications</h3>
+          <p>Custom functionality built around specific business or user needs.</p>
+          <a href="#quote" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <article class="service-card clay" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <h3>Maintenance &amp; Updates</h3>
+          <p>Keep your website updated, functional and professional.</p>
+          <a href="#quote" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- =============================
-       OUR MASTERPIECES — 3D SCROLL GALLERY
+       WHY JAYWEBS
        ============================= -->
-  <section class="gallery-wrap" id="portfolio" aria-label="Our Masterpieces">
-    <h2 class="sr-only">Our Masterpieces</h2>
+  <section class="section-padding" id="why">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="chunky-badge">Why JayWebs</span>
+        <h2 class="section-title">Why JayWebs?</h2>
+        <p class="section-sub">Every decision is driven by what will move your business forward.</p>
+      </div>
+
+      <div class="why-grid">
+        <article class="why-card clay" data-aos="fade-up" data-aos-delay="50">
+          <div class="why-num">01</div>
+          <h3>Built Around Your Business</h3>
+          <p>Every website starts with your goals, audience and brand.</p>
+        </article>
+        <article class="why-card clay" data-aos="fade-up" data-aos-delay="100">
+          <div class="why-num">02</div>
+          <h3>Mobile First</h3>
+          <p>Your website should look and work beautifully on every device.</p>
+        </article>
+        <article class="why-card clay" data-aos="fade-up" data-aos-delay="150">
+          <div class="why-num">03</div>
+          <h3>Modern Design</h3>
+          <p>Clean interfaces designed to make your business look credible.</p>
+        </article>
+        <article class="why-card clay" data-aos="fade-up" data-aos-delay="200">
+          <div class="why-num">04</div>
+          <h3>Performance Focused</h3>
+          <p>Fast-loading, lightweight and efficient websites.</p>
+        </article>
+        <article class="why-card clay" data-aos="fade-up" data-aos-delay="250">
+          <div class="why-num">05</div>
+          <h3>Built to Convert</h3>
+          <p>Clear calls-to-action designed to guide visitors toward contacting your business.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       SELECTED WORK — 3D SPHERE
+       ============================= -->
+  <section class="gallery-wrap" id="portfolio" aria-label="Selected Work">
+    <h2 class="sr-only">Selected Work</h2>
     <div class="scene">
       <div class="sphere" id="sphere"></div>
-
       <div class="floating-text">
-        <span class="chunky-badge">Our Masterpieces</span>
-        <h2 id="dynamic-title">E-Commerce Platform</h2>
-        <p id="dynamic-desc">Modern online store with seamless user experience and secure payment integration.</p>
+        <span class="chunky-badge">Selected Work</span>
+        <h2 id="dynamic-title">Business Website</h2>
+        <p id="dynamic-desc">Scroll to explore the range of digital experiences we build.</p>
         <div class="scroll-hint">
           <i class="fas fa-arrow-down"></i>
           Scroll to explore
@@ -1440,199 +1501,410 @@
   </section>
 
   <!-- =============================
-       TESTIMONIALS
+       CASE STUDIES
        ============================= -->
-  <section class="section-padding" id="testimonials">
+  <section class="section-padding" id="case-studies">
     <div class="container">
       <div class="section-head" data-aos="fade-up">
-        <span class="chunky-badge">Client Feedback</span>
-        <h2 class="section-title">Client love stories</h2>
-        <p class="section-sub">Real words from real businesses we've helped grow online.</p>
+        <span class="chunky-badge">Case Studies</span>
+        <h2 class="section-title">Projects &amp; outcomes</h2>
+        <p class="section-sub">A closer look at how we approach design and development.</p>
       </div>
 
-      <div class="swiper testimonials-swiper" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide testimonial">
-            <img src="https://placehold.co/100x100/18181b/f4f4f5?text=N" alt="Mr. Ndlovu" class="testimonial-photo"/>
-            <blockquote>"JayWebs built my business site fast and beautiful. Highly recommended!"</blockquote>
-            <cite>— MR. NDLOVU</cite>
+      <article class="case-study clay" data-aos="fade-up">
+        <div class="case-media">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80&auto=format&fit=crop" alt="Business website concept project" loading="lazy">
+        </div>
+        <div class="case-body">
+          <span class="case-tag">Business Website · Concept Project</span>
+          <h3>Service Business Website</h3>
+          <div class="case-block">
+            <div class="case-block-label">The Problem</div>
+            <p>Small service businesses often operate without a professional website, or with an outdated one that does not reflect the quality of their work.</p>
           </div>
-          <div class="swiper-slide testimonial">
-            <img src="https://placehold.co/100x100/18181b/f4f4f5?text=M" alt="Mpho D." class="testimonial-photo"/>
-            <blockquote>"Professional and affordable. My sales increased within a month."</blockquote>
-            <cite>— MPHO D.</cite>
+          <div class="case-block">
+            <div class="case-block-label">The Solution</div>
+            <p>A clean, responsive website built to communicate credibility, present services clearly and make it easy for visitors to get in touch.</p>
           </div>
-          <div class="swiper-slide testimonial">
-            <img src="https://placehold.co/100x100/18181b/f4f4f5?text=S" alt="Sarah K." class="testimonial-photo"/>
-            <blockquote>"Exceptional service and attention to detail. Will definitely work with them again."</blockquote>
-            <cite>— SARAH K.</cite>
-          </div>
-          <div class="swiper-slide testimonial">
-            <img src="https://placehold.co/100x100/18181b/f4f4f5?text=D" alt="David T." class="testimonial-photo"/>
-            <blockquote>"The website exceeded my expectations. Great communication throughout the process."</blockquote>
-            <cite>— DAVID T.</cite>
-          </div>
-          <div class="swiper-slide testimonial">
-            <img src="https://placehold.co/100x100/18181b/f4f4f5?text=L" alt="Lisa M." class="testimonial-photo"/>
-            <blockquote>"Fast turnaround and excellent support. My business looks professional online now."</blockquote>
-            <cite>— LISA M.</cite>
+          <div class="case-block">
+            <div class="case-block-label">The Outcome</div>
+            <p>Delivered a modern site with strong typography, clear calls-to-action and a mobile-first layout. Labelled as a concept project — no client results are claimed.</p>
           </div>
         </div>
-        <div class="testimonials-pagination swiper-pagination"></div>
+      </article>
+
+      <article class="case-study clay reverse" data-aos="fade-up">
+        <div class="case-media">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80&auto=format&fit=crop" alt="E-commerce store concept project" loading="lazy">
+        </div>
+        <div class="case-body">
+          <span class="case-tag">E-Commerce · Concept Project</span>
+          <h3>Small Retail Store</h3>
+          <div class="case-block">
+            <div class="case-block-label">The Problem</div>
+            <p>Retailers relying only on social media struggle to present products in an organised, trustworthy way that drives direct sales.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-block-label">The Solution</div>
+            <p>A modern online store focused on clean product presentation, simple navigation and a smooth browsing experience on mobile.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-block-label">The Outcome</div>
+            <p>Delivered a responsive store layout with product categories, product pages and a simple checkout flow. Concept project.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- =============================
+       BEFORE / AFTER
+       ============================= -->
+  <section class="section-padding" id="redesign">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="chunky-badge">Redesigns</span>
+        <h2 class="section-title">From outdated to outstanding</h2>
+        <p class="section-sub">What a JayWebs redesign typically changes and improves.</p>
+      </div>
+
+      <div class="ba-grid">
+        <article class="ba-card clay" data-aos="fade-up" data-aos-delay="50">
+          <div class="ba-visual">
+            <div class="ba-thumb">
+              <span class="ba-label">Before</span>
+              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80&auto=format&fit=crop" alt="Before redesign example" loading="lazy">
+            </div>
+            <div class="ba-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="ba-thumb after">
+              <span class="ba-label">After</span>
+              <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80&auto=format&fit=crop" alt="After redesign example" loading="lazy">
+            </div>
+          </div>
+          <h3>Modern layout &amp; hierarchy</h3>
+          <ul class="ba-list">
+            <li>Clearer visual hierarchy and typography</li>
+            <li>Stronger calls-to-action placement</li>
+            <li>Full mobile responsiveness</li>
+            <li>Consistent branding across pages</li>
+          </ul>
+        </article>
+
+        <article class="ba-card clay" data-aos="fade-up" data-aos-delay="100">
+          <div class="ba-visual">
+            <div class="ba-thumb">
+              <span class="ba-label">Before</span>
+              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80&auto=format&fit=crop" alt="Before redesign example" loading="lazy">
+            </div>
+            <div class="ba-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="ba-thumb after">
+              <span class="ba-label">After</span>
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80&auto=format&fit=crop" alt="After redesign example" loading="lazy">
+            </div>
+          </div>
+          <h3>Navigation &amp; UX</h3>
+          <ul class="ba-list">
+            <li>Simplified navigation structure</li>
+            <li>Improved user experience</li>
+            <li>Cleaner content spacing</li>
+            <li>Faster loading &amp; performance</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- =============================
-       SERVICES / PRICING
+       PROCESS
+       ============================= -->
+  <section class="section-padding" id="process">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="chunky-badge">Process</span>
+        <h2 class="section-title">How it works</h2>
+        <p class="section-sub">A clear, predictable process from first conversation to launch.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step clay" data-aos="fade-up" data-aos-delay="50">
+          <div class="process-num">01</div>
+          <h3>Discovery</h3>
+          <p>We learn about your business, goals and audience.</p>
+        </div>
+        <div class="process-step clay" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-num">02</div>
+          <h3>Strategy</h3>
+          <p>We plan your website structure and user experience.</p>
+        </div>
+        <div class="process-step clay" data-aos="fade-up" data-aos-delay="150">
+          <div class="process-num">03</div>
+          <h3>Design</h3>
+          <p>We create the visual direction and interface.</p>
+        </div>
+        <div class="process-step clay" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-num">04</div>
+          <h3>Development</h3>
+          <p>We build, test and optimize the website.</p>
+        </div>
+        <div class="process-step clay" data-aos="fade-up" data-aos-delay="250">
+          <div class="process-num">05</div>
+          <h3>Launch</h3>
+          <p>Your website goes live.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       ABOUT / FOUNDER
+       ============================= -->
+  <section class="section-padding" id="about">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="chunky-badge">About</span>
+        <h2 class="section-title">Meet the founder</h2>
+      </div>
+
+      <div class="founder-grid clay" data-aos="fade-up">
+        <div class="founder-photo" aria-label="Founder photo placeholder">
+          <i class="fas fa-user" style="font-size: 4rem;"></i>
+        </div>
+
+        <div class="founder-body">
+          <h3>Jaden Nkuna</h3>
+          <div class="founder-role">Founder · JayWebs</div>
+          <p>
+            I'm Jaden, the founder of JayWebs. I build modern websites for businesses and entrepreneurs
+            who want a stronger and more professional presence online.
+          </p>
+          <p>
+            Every project starts with understanding your business — what you do, who you serve and what
+            you want visitors to do. From there, I design and build a website that represents your business properly.
+          </p>
+
+          <div class="skills">
+            <span class="skill-pill">Web Design</span>
+            <span class="skill-pill">Web Development</span>
+            <span class="skill-pill">UI / UX</span>
+            <span class="skill-pill">Responsive Design</span>
+            <span class="skill-pill">SEO Basics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       PRICING
        ============================= -->
   <section class="section-padding" id="pricing">
     <div class="container">
       <div class="section-head" data-aos="fade-up">
-        <span class="chunky-badge">Signature Services</span>
-        <h2 class="section-title">Pick the plan that fits your ambition.</h2>
-        <p class="section-sub">Transparent pricing, no hidden fees. Every plan is built for performance.</p>
+        <span class="chunky-badge">Pricing</span>
+        <h2 class="section-title">Transparent packages</h2>
+        <p class="section-sub">Clear starting points. Final pricing depends on your project requirements.</p>
       </div>
 
       <div class="pricing-container">
-        <div class="pricing-box" data-aos="fade-up" data-aos-delay="100">
-          <h3>Basic</h3>
-          <div class="price">R2,099</div>
-          <p>1 Page Design</p>
-          <p>Responsive Layout</p>
-          <p>Basic SEO</p>
-          <p>Contact Form</p>
-          <button class="chunky-btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Select Plan</button>
+        <div class="pricing-box" data-aos="fade-up" data-aos-delay="50">
+          <h3>Starter</h3>
+          <div class="price">R2,499</div>
+          <div class="price-note">Ideal for a single-page or simple presence.</div>
+          <ul class="pricing-list">
+            <li><i class="fas fa-check"></i> 1–3 page design</li>
+            <li><i class="fas fa-check"></i> Responsive layout</li>
+            <li><i class="fas fa-check"></i> Contact form</li>
+            <li><i class="fas fa-check"></i> Basic SEO setup</li>
+            <li><i class="fas fa-check"></i> Mobile optimized</li>
+          </ul>
+          <button class="chunky-btn ghost" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get Started</button>
         </div>
 
-        <div class="pricing-box" data-aos="fade-up" data-aos-delay="200">
-          <h3>Standard</h3>
-          <div class="price">R3,499</div>
-          <p>3 Pages</p>
-          <p>Contact Form &amp; SEO</p>
-          <p>Social Media Integration</p>
-          <p>1 Month Support</p>
-          <button class="chunky-btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Select Plan</button>
+        <div class="pricing-box featured" data-aos="fade-up" data-aos-delay="100">
+          <h3>Business</h3>
+          <div class="price">R4,999</div>
+          <div class="price-note">Most popular for growing businesses.</div>
+          <ul class="pricing-list">
+            <li><i class="fas fa-check"></i> 4–6 page website</li>
+            <li><i class="fas fa-check"></i> Fully responsive design</li>
+            <li><i class="fas fa-check"></i> Contact form &amp; SEO</li>
+            <li><i class="fas fa-check"></i> Social media integration</li>
+            <li><i class="fas fa-check"></i> Basic CMS setup</li>
+          </ul>
+          <button class="chunky-btn" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get Started</button>
         </div>
 
-        <div class="pricing-box" data-aos="fade-up" data-aos-delay="300">
-          <h3>Premium</h3>
-          <div class="price">R6,999</div>
-          <p>Full Website + Blog</p>
-          <p>E-commerce Functionality</p>
-          <p>Advanced SEO</p>
-          <p>Ongoing Support</p>
-          <button class="chunky-btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Select Plan</button>
+        <div class="pricing-box" data-aos="fade-up" data-aos-delay="150">
+          <h3>Custom</h3>
+          <div class="price">From R8,999</div>
+          <div class="price-note">For larger or more complex projects.</div>
+          <ul class="pricing-list">
+            <li><i class="fas fa-check"></i> Custom scope &amp; features</li>
+            <li><i class="fas fa-check"></i> E-commerce or web app</li>
+            <li><i class="fas fa-check"></i> Advanced SEO &amp; performance</li>
+            <li><i class="fas fa-check"></i> Ongoing support options</li>
+            <li><i class="fas fa-check"></i> Tailored to your business</li>
+          </ul>
+          <button class="chunky-btn ghost" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Request Quote</button>
+        </div>
+      </div>
+
+      <p class="pricing-footnote">
+        Not sure which package you need? <a href="#quote" style="color: var(--accent);">Let's discuss your project.</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- =============================
+       QUOTE CALCULATOR
+       ============================= -->
+  <section class="section-padding" id="quote">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="chunky-badge">Instant Estimate</span>
+        <h2 class="section-title">Build your quote</h2>
+        <p class="section-sub">Answer a few quick questions and we'll estimate your project.</p>
+      </div>
+
+      <div class="calc-container clay" data-aos="fade-up">
+        <div class="calc-progress" id="calcProgress" aria-hidden="true">
+          <span class="active"></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="calc-step active" data-step="1">
+          <div class="calc-step-label">Step 1 of 5</div>
+          <h3>What type of website do you need?</h3>
+          <div class="calc-options" id="typeOptions">
+            <label class="calc-option"><input type="radio" name="siteType" value="business"> Business Website</label>
+            <label class="calc-option"><input type="radio" name="siteType" value="ecommerce"> E-Commerce</label>
+            <label class="calc-option"><input type="radio" name="siteType" value="landing"> Landing Page</label>
+            <label class="calc-option"><input type="radio" name="siteType" value="portfolio"> Portfolio</label>
+            <label class="calc-option"><input type="radio" name="siteType" value="custom"> Custom Website</label>
+          </div>
+          <div class="calc-nav">
+            <span></span>
+            <button class="chunky-btn" data-next="2">Next <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="calc-step" data-step="2">
+          <div class="calc-step-label">Step 2 of 5</div>
+          <h3>How many pages?</h3>
+          <div class="calc-options" id="pagesOptions">
+            <label class="calc-option"><input type="radio" name="pages" value="1-3"> 1–3 pages</label>
+            <label class="calc-option"><input type="radio" name="pages" value="4-6"> 4–6 pages</label>
+            <label class="calc-option"><input type="radio" name="pages" value="7-10"> 7–10 pages</label>
+            <label class="calc-option"><input type="radio" name="pages" value="10+"> 10+ pages</label>
+          </div>
+          <div class="calc-nav">
+            <button class="chunky-btn ghost" data-prev="1"><i class="fas fa-arrow-left"></i> Back</button>
+            <button class="chunky-btn" data-next="3">Next <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="calc-step" data-step="3">
+          <div class="calc-step-label">Step 3 of 5</div>
+          <h3>Additional features</h3>
+          <div class="calc-options" id="featureOptions">
+            <label class="calc-option"><input type="checkbox" name="features" value="contact"> Contact Form</label>
+            <label class="calc-option"><input type="checkbox" name="features" value="booking"> Booking System</label>
+            <label class="calc-option"><input type="checkbox" name="features" value="blog"> Blog</label>
+            <label class="calc-option"><input type="checkbox" name="features" value="ecommerce"> E-Commerce</label>
+            <label class="calc-option"><input type="checkbox" name="features" value="accounts"> User Accounts</label>
+            <label class="calc-option"><input type="checkbox" name="features" value="cms"> CMS</label>
+            <label class="calc-option"><input type="checkbox" name="features" value="animations"> Animations</label>
+            <label class="calc-option"><input type="checkbox" name="features" value="customfn"> Custom Functionality</label>
+            <label class="calc-option"><input type="checkbox" name="features" value="other"> Other</label>
+          </div>
+          <div class="calc-nav">
+            <button class="chunky-btn ghost" data-prev="2"><i class="fas fa-arrow-left"></i> Back</button>
+            <button class="chunky-btn" data-next="4">Next <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="calc-step" data-step="4">
+          <div class="calc-step-label">Step 4 of 5</div>
+          <h3>Content</h3>
+          <div class="calc-options" id="contentOptions">
+            <label class="calc-option"><input type="radio" name="content" value="have"> I have my content</label>
+            <label class="calc-option"><input type="radio" name="content" value="help"> I need help with content</label>
+          </div>
+          <div class="calc-nav">
+            <button class="chunky-btn ghost" data-prev="3"><i class="fas fa-arrow-left"></i> Back</button>
+            <button class="chunky-btn" data-next="5">Get Estimate <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="calc-step" data-step="5">
+          <div class="calc-step-label">Step 5 of 5</div>
+          <h3>Your estimate</h3>
+
+          <div class="calc-result">
+            <div class="calc-result-label">Estimated Project Cost</div>
+            <div class="calc-result-price" id="calcPrice">R2,499</div>
+            <div class="calc-result-note">
+              This is an estimate. Final pricing depends on project requirements.
+            </div>
+          </div>
+
+          <div class="calc-summary" id="calcSummary"></div>
+
+          <div class="calc-nav">
+            <button class="chunky-btn ghost" data-prev="4"><i class="fas fa-arrow-left"></i> Back</button>
+            <button class="chunky-btn" id="calcRequestBtn">Request My Quote <i class="fas fa-arrow-right"></i></button>
+          </div>
+
+          <div style="margin-top: 1rem; text-align: center;">
+            <button class="chunky-btn ghost" id="downloadQuote" style="width: 100%;">
+              <i class="fas fa-file-pdf"></i> Download Estimate (PDF)
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =============================
-       BOOKING
+       WHAT YOU CAN EXPECT
        ============================= -->
-  <section class="section-padding" id="booking">
+  <section class="section-padding" id="expect">
     <div class="container">
       <div class="section-head" data-aos="fade-up">
-        <span class="chunky-badge">Book Now</span>
-        <h2 class="section-title">Book your digital transformation.</h2>
-        <p class="section-sub">Tell us about your project and we'll be in touch within 24 hours.</p>
+        <span class="chunky-badge">Working Together</span>
+        <h2 class="section-title">What you can expect</h2>
+        <p class="section-sub">How we approach every project.</p>
       </div>
 
-      <div class="booking-container clay" data-aos="fade-up" data-aos-delay="100">
-        <form id="booking-form" netlify>
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
-            <div class="error-message" id="name-error">Please enter your full name</div>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-            <div class="error-message" id="email-error">Please enter a valid email address</div>
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required>
-            <div class="error-message" id="phone-error">Please enter a valid phone number</div>
-          </div>
-
-          <div class="form-group">
-            <label for="service">Service Interested In</label>
-            <select id="service" name="service" required>
-              <option value="">Select a service</option>
-              <option value="basic">Basic Plan (R2,099)</option>
-              <option value="standard">Standard Plan (R3,499)</option>
-              <option value="premium">Premium Plan (R6,999)</option>
-              <option value="custom">Custom Solution</option>
-            </select>
-            <div class="error-message" id="service-error">Please select a service</div>
-          </div>
-
-          <div class="form-group">
-            <label for="date">Preferred Date</label>
-            <input type="date" id="date" name="date" required>
-            <div class="error-message" id="date-error">Please select a valid date</div>
-          </div>
-
-          <div class="form-group">
-            <label for="time">Preferred Time</label>
-            <select id="time" name="time" required>
-              <option value="">Select a time</option>
-              <option value="09:00">09:00 AM</option>
-              <option value="10:00">10:00 AM</option>
-              <option value="11:00">11:00 AM</option>
-              <option value="12:00">12:00 PM</option>
-              <option value="13:00">01:00 PM</option>
-              <option value="14:00">02:00 PM</option>
-              <option value="15:00">03:00 PM</option>
-              <option value="16:00">04:00 PM</option>
-            </select>
-            <div class="error-message" id="time-error">Please select a time</div>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Your Vision</label>
-            <textarea id="message" name="message" placeholder="Tell us about your project dreams..."></textarea>
-          </div>
-
-          <div class="loading-spinner" id="booking-spinner"></div>
-          <div class="success-message" id="booking-success">
-            Thank you for your booking! We will contact you shortly to confirm your consultation.
-          </div>
-
-          <button type="submit" id="booking-submit" class="chunky-btn" style="width:100%;">
-            Begin Your Journey <i class="fas fa-arrow-right"></i>
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- =============================
-       STATS / IMPACT
-       ============================= -->
-  <section class="section-padding" id="impact">
-    <div class="container">
-      <div class="section-head" data-aos="fade-up">
-        <span class="chunky-badge">Our Digital Footprint</span>
-        <h2 class="section-title">Numbers that speak.</h2>
-      </div>
-
-      <div class="stats-container">
-        <div class="stat" data-aos="fade-up" data-aos-delay="100">
-          <div class="stat-number" data-target="15">0</div>
-          <div class="stat-label">Websites Built</div>
+      <div class="expect-grid">
+        <div class="expect-card clay" data-aos="fade-up" data-aos-delay="50">
+          <i class="fas fa-comments"></i>
+          <h3>Clear Communication</h3>
+          <p>Straightforward updates and honest conversation at every stage.</p>
         </div>
-        <div class="stat" data-aos="fade-up" data-aos-delay="200">
-          <div class="stat-number" data-target="12">0</div>
-          <div class="stat-label">Happy Clients</div>
+        <div class="expect-card clay" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-receipt"></i>
+          <h3>Transparent Pricing</h3>
+          <p>No hidden fees. You know what you're paying for before we start.</p>
         </div>
-        <div class="stat" data-aos="fade-up" data-aos-delay="300">
-          <div class="stat-number" data-target="99">0</div>
-          <div class="stat-label">Satisfaction %</div>
+        <div class="expect-card clay" data-aos="fade-up" data-aos-delay="150">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Responsive Design</h3>
+          <p>Websites that work properly on every device and screen size.</p>
+        </div>
+        <div class="expect-card clay" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-gem"></i>
+          <h3>Professional Presentation</h3>
+          <p>Clean interfaces designed to make your business look credible.</p>
+        </div>
+        <div class="expect-card clay" data-aos="fade-up" data-aos-delay="250">
+          <i class="fas fa-bullseye"></i>
+          <h3>Project-Focused Development</h3>
+          <p>Every decision is made with your business goals in mind.</p>
         </div>
       </div>
     </div>
@@ -1645,36 +1917,68 @@
     <div class="container">
       <div class="section-head" data-aos="fade-up">
         <span class="chunky-badge">FAQ</span>
-        <h2 class="section-title">Frequently asked questions.</h2>
+        <h2 class="section-title">Frequently asked questions</h2>
       </div>
 
       <div class="faq-container">
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
-          <button class="faq-question">How long does a website build take?</button>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question">How much does a website cost?</button>
           <div class="faq-answer">
-            Typically between 2–4 weeks depending on complexity and features. We work closely with you to ensure
-            timely delivery without compromising quality.
+            Packages start from R2,499 for a simple site, R4,999 for a standard business website, and from R8,999 for larger custom projects. Final pricing depends on the number of pages, features and content requirements.
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-          <button class="faq-question">Do you offer support after launch?</button>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question">How long does a website take?</button>
           <div class="faq-answer">
-            Yes, we provide ongoing support packages for maintenance, updates, and technical assistance.
-            Our support plans are tailored to your specific needs.
+            Most small to medium websites take between 2–4 weeks depending on complexity. Larger or custom projects take longer. Timelines are agreed upfront.
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
-          <button class="faq-question">Can I update my website content myself?</button>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question">Do you build websites from scratch?</button>
           <div class="faq-answer">
-            Absolutely! We provide a simple, user-friendly content management system (CMS) that allows you to easily
-            update text, images, and other content without technical knowledge.
+            Yes. Every website is built from scratch around your business — no recycled templates that look like everyone else's.
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-          <button class="faq-question">Do you provide hosting services?</button>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question">Will my website work on mobile?</button>
           <div class="faq-answer">
-            Yes, we offer reliable hosting solutions with a 99.9% uptime guarantee, regular backups, and security
-            monitoring. We can also help migrate your existing website to our servers.
+            Absolutely. Every site is built mobile-first and tested across phones, tablets and desktops.
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question">Can I update my website later?</button>
+          <div class="faq-answer">
+            Yes. Depending on the package, we can set up a content management system so you can update text and images yourself. We also offer maintenance for clients who prefer us to handle it.
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question">Do you provide hosting?</button>
+          <div class="faq-answer">
+            We can advise on and help set up hosting. Hosting fees are separate and paid directly to the hosting provider.
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question">Can you help with domain setup?</button>
+          <div class="faq-answer">
+            Yes. We can help you register a domain and connect it to your new website.
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question">Do you offer website maintenance?</button>
+          <div class="faq-answer">
+            Yes. Maintenance and updates are available as an ongoing service. Let's discuss what you need.
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question">Can I request changes?</button>
+          <div class="faq-answer">
+            Yes — revisions are part of the process. We agree on the scope upfront so expectations are clear.
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question">How does payment work?</button>
+          <div class="faq-answer">
+            A deposit is required before work begins, with the balance payable on completion. Full details are confirmed in your quote.
           </div>
         </div>
       </div>
@@ -1682,59 +1986,23 @@
   </section>
 
   <!-- =============================
-       QUOTE CALCULATOR
+       FINAL CTA
        ============================= -->
-  <section class="section-padding" id="quote">
+  <section class="section-padding" id="final-cta">
     <div class="container">
-      <div class="section-head" data-aos="fade-up">
-        <span class="chunky-badge">Instant Estimate</span>
-        <h2 class="section-title">Quote calculator.</h2>
-      </div>
-
-      <div class="calculator-container clay" data-aos="fade-up" data-aos-delay="100">
-        <form id="quote-form" onsubmit="return false;">
-          <div class="form-group">
-            <label for="type">Website Type</label>
-            <select id="type" name="type">
-              <option value="2099">Basic Website (R2,099)</option>
-              <option value="3499">Business Website (R3,499)</option>
-              <option value="6999">E-Commerce Website (R6,999)</option>
-            </select>
-          </div>
-
-          <div>
-            <label>Additional Features</label>
-            <div class="features" id="features">
-              <label><input type="checkbox" value="500" /> SEO Optimization (+R500)</label>
-              <label><input type="checkbox" value="200" /> Live Chat (+R200)</label>
-              <label><input type="checkbox" value="400" /> Blog Setup (+R400)</label>
-              <label><input type="checkbox" value="700" /> Booking System (+R700)</label>
-            </div>
-          </div>
-
-          <button id="downloadQuote" type="button" class="chunky-btn" style="width:100%;">
-            <i class="fas fa-file-pdf"></i> Download Quote (PDF)
+      <div class="final-cta" data-aos="fade-up">
+        <span class="chunky-badge">Let's Build</span>
+        <h2>Ready to build something better?</h2>
+        <p>Tell us about your business and let's create a website that represents it properly.</p>
+        <div class="final-cta-actions">
+          <button class="chunky-btn" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">
+            Get a Free Quote <i class="fas fa-arrow-right"></i>
           </button>
-
-          <div class="result" id="result">Estimated Quote: R2,099</div>
-        </form>
+          <button class="chunky-btn ghost" onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">
+            View Our Work
+          </button>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- =============================
-       FINAL CTA / JOURNEY
-       ============================= -->
-  <section class="journey-section" id="journey">
-    <div class="constellation" id="constellation"></div>
-
-    <div class="journey-content" data-aos="fade-up">
-      <span class="chunky-badge">Let's Build</span>
-      <h2>Ready to build your vision?</h2>
-      <p>From concept to launch — we craft digital experiences that perform.</p>
-      <a href="#booking" class="chunky-btn">
-        Start Your Project <i class="fas fa-arrow-right"></i>
-      </a>
     </div>
   </section>
 
@@ -1745,15 +2013,124 @@
     <div class="container">
       <div class="section-head" data-aos="fade-up">
         <span class="chunky-badge">Contact</span>
-        <h2 class="section-title">Let's create magic together.</h2>
-        <p class="section-sub">Follow along or reach out — we're always up for a good conversation.</p>
+        <h2 class="section-title">Send a project request</h2>
+        <p class="section-sub">Fill in the form and we'll open WhatsApp with your details ready to send.</p>
       </div>
 
-      <div class="social-icons" data-aos="fade-up" data-aos-delay="100">
-        <a href="https://www.facebook.com/profile.php?id=61577908416134" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/@jaywebs10" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com/jaywebs10" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/27635235951" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <div class="contact-grid">
+        <div class="contact-side" data-aos="fade-up">
+          <a class="contact-item" href="https://wa.me/27635235951" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+            <div class="contact-item-body">
+              <span class="contact-item-label">WhatsApp</span>
+              <span class="contact-item-value">+27 63 523 5951</span>
+            </div>
+          </a>
+
+          <a class="contact-item" href="https://twitter.com/@jaywebs10" target="_blank" rel="noopener">
+            <i class="fab fa-twitter"></i>
+            <div class="contact-item-body">
+              <span class="contact-item-label">X / Twitter</span>
+              <span class="contact-item-value">@jaywebs10</span>
+            </div>
+          </a>
+
+          <a class="contact-item" href="https://instagram.com/jaywebs10" target="_blank" rel="noopener">
+            <i class="fab fa-instagram"></i>
+            <div class="contact-item-body">
+              <span class="contact-item-label">Instagram</span>
+              <span class="contact-item-value">@jaywebs10</span>
+            </div>
+          </a>
+
+          <a class="contact-item" href="https://www.facebook.com/profile.php?id=61577908416134" target="_blank" rel="noopener">
+            <i class="fab fa-facebook-f"></i>
+            <div class="contact-item-body">
+              <span class="contact-item-label">Facebook</span>
+              <span class="contact-item-value">JayWebs</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="contact-form clay" data-aos="fade-up" data-aos-delay="100">
+          <form id="booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+                <div class="error-message" id="name-error">Please enter your name</div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+                <div class="error-message" id="email-error">Please enter a valid email</div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="business">Business Name</label>
+                <input type="text" id="business" name="business" autocomplete="organization">
+              </div>
+              <div class="form-group">
+                <label for="website">Website / Social Media</label>
+                <input type="text" id="website" name="website" placeholder="URL or handle">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+              </div>
+              <div class="form-group">
+                <label for="service">Project Type</label>
+                <select id="service" name="service" required>
+                  <option value="">Select project type</option>
+                  <option value="Business Website">Business Website</option>
+                  <option value="E-Commerce">E-Commerce</option>
+                  <option value="Landing Page">Landing Page</option>
+                  <option value="Portfolio">Portfolio</option>
+                  <option value="Website Redesign">Website Redesign</option>
+                  <option value="Custom / Other">Custom / Other</option>
+                </select>
+                <div class="error-message" id="service-error">Please select a project type</div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="budget">Budget Range</label>
+                <select id="budget" name="budget">
+                  <option value="">Select budget (optional)</option>
+                  <option value="R2,000 – R5,000">R2,000 – R5,000</option>
+                  <option value="R5,000 – R10,000">R5,000 – R10,000</option>
+                  <option value="R10,000+">R10,000+</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="date">Preferred Start Date</label>
+                <input type="date" id="date" name="date">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your project..."></textarea>
+            </div>
+
+            <div class="loading-spinner" id="booking-spinner"></div>
+            <div class="success-message" id="booking-success">
+              Opening WhatsApp... Your details are ready to send.
+            </div>
+
+            <button type="submit" id="booking-submit" class="chunky-btn" style="width:100%;">
+              Send via WhatsApp <i class="fab fa-whatsapp"></i>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -1763,7 +2140,58 @@
        ============================= -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 JayWebs. All rights reserved. — Futuristic Web Design South Africa</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="https://i.postimg.cc/SQJHd3P3/FF369872-B995-4943-8981-FDB5859BE291.png" alt="JayWebs logo">
+          <p>Modern websites for modern businesses.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Business Websites</a></li>
+            <li><a href="#services">E-Commerce</a></li>
+            <li><a href="#services">Landing Pages</a></li>
+            <li><a href="#redesign">Website Redesign</a></li>
+            <li><a href="#services">Custom Development</a></li>
+            <li><a href="#services">Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://wa.me/27635235951" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://twitter.com/@jaywebs10" target="_blank" rel="noopener">X / Twitter</a></li>
+            <li><a href="https://instagram.com/jaywebs10" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61577908416134" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+          <div class="footer-social">
+            <a href="https://wa.me/27635235951" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://twitter.com/@jaywebs10" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/jaywebs10" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61577908416134" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 JayWebs. All rights reserved.</span>
+        <span>Modern websites for modern businesses.</span>
+      </div>
     </div>
   </footer>
 
@@ -1772,46 +2200,21 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <a href="#booking" class="sticky-contact-btn" aria-label="Book a Consultation">
-    <i class="fas fa-calendar-alt"></i> Book Now
+  <a href="#quote" class="sticky-contact-btn" aria-label="Get a quote">
+    <i class="fas fa-calculator"></i> Get a Quote
   </a>
 
   <!-- =============================
        EXTERNAL SCRIPTS
        ============================= -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-
-      /* =========================================================
-         AOS
-         ========================================================= */
-      if (window.AOS) {
-        AOS.init({ duration: 900, once: true, offset: 80 });
-      }
-
-      /* =========================================================
-         TESTIMONIALS SWIPER — adaptive slides per view
-         ========================================================= */
-      let testimonialsSwiper;
-      try {
-        testimonialsSwiper = new Swiper('.testimonials-swiper', {
-          slidesPerView: 1,
-          spaceBetween: 20,
-          pagination: { el: '.testimonials-pagination', clickable: true },
-          autoplay: { delay: 5000, disableOnInteraction: false },
-          loop: true,
-          breakpoints: {
-            640:  { slidesPerView: 2, spaceBetween: 22 },
-            1024: { slidesPerView: 3, spaceBetween: 24 }
-          }
-        });
-      } catch (e) { console.warn('Testimonials swiper init failed:', e); }
+    window.addEventListener('load', function () {
+      if (window.AOS) AOS.init({ duration: 900, once: true, offset: 80 });
 
       /* =========================================================
          MOBILE NAV
@@ -1823,14 +2226,17 @@
         menuBtn.addEventListener('click', (e) => {
           e.stopPropagation();
           nav.classList.toggle('open');
+          const isOpen = nav.classList.contains('open');
+          menuBtn.setAttribute('aria-expanded', isOpen);
           const icon = menuBtn.querySelector('i');
-          icon.classList.toggle('fa-bars');
-          icon.classList.toggle('fa-times');
+          icon.classList.toggle('fa-bars', !isOpen);
+          icon.classList.toggle('fa-times', isOpen);
         });
 
         document.addEventListener('click', (e) => {
           if (!nav.contains(e.target) && !menuBtn.contains(e.target) && nav.classList.contains('open')) {
             nav.classList.remove('open');
+            menuBtn.setAttribute('aria-expanded', 'false');
             menuBtn.querySelector('i').classList.add('fa-bars');
             menuBtn.querySelector('i').classList.remove('fa-times');
           }
@@ -1838,7 +2244,7 @@
       }
 
       /* =========================================================
-         SMOOTH SCROLL FOR NAV LINKS
+         SMOOTH SCROLL
          ========================================================= */
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -1847,12 +2253,10 @@
           const target = document.querySelector(targetId);
           if (!target) return;
           e.preventDefault();
-          window.scrollTo({
-            top: target.offsetTop - 70,
-            behavior: 'smooth'
-          });
+          window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
           if (nav && nav.classList.contains('open')) {
             nav.classList.remove('open');
+            menuBtn.setAttribute('aria-expanded', 'false');
             menuBtn.querySelector('i').classList.add('fa-bars');
             menuBtn.querySelector('i').classList.remove('fa-times');
           }
@@ -1876,96 +2280,196 @@
       });
 
       /* =========================================================
-         QUOTE CALCULATOR
+         MULTI-STEP QUOTE CALCULATOR
          ========================================================= */
-      const typeSelect = document.getElementById('type');
-      const featureCheckboxes = document.querySelectorAll('.features input[type="checkbox"]');
-      const resultDiv = document.getElementById('result');
+      const calcState = {
+        siteType: 'business',
+        pages: '1-3',
+        features: [],
+        content: 'have'
+      };
 
-      function calculateQuote() {
-        let total = parseInt(typeSelect.value) || 0;
-        featureCheckboxes.forEach(cb => { if (cb.checked) total += parseInt(cb.value) || 0; });
-        resultDiv.textContent = `Estimated Quote: R${total.toLocaleString()}`;
-      }
+      const siteBase = {
+        business: 2499, ecommerce: 4999, landing: 1999,
+        portfolio: 2499, custom: 8999
+      };
 
-      if (typeSelect) {
-        typeSelect.addEventListener('change', calculateQuote);
-        featureCheckboxes.forEach(cb => cb.addEventListener('change', calculateQuote));
-        calculateQuote();
-      }
+      const pageMultiplier = { '1-3': 1, '4-6': 1.3, '7-10': 1.6, '10+': 2 };
 
-      /* =========================================================
-         PDF QUOTE
-         ========================================================= */
-      const downloadBtn = document.getElementById('downloadQuote');
-      if (downloadBtn) {
-        downloadBtn.addEventListener('click', function () {
-          try {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-            const quote = resultDiv ? resultDiv.textContent : 'Estimated Quote: R0';
+      const featurePrices = {
+        contact: 0, booking: 800, blog: 600, ecommerce: 1500,
+        accounts: 1200, cms: 800, animations: 400, customfn: 1000, other: 500
+      };
 
-            doc.setFontSize(22);
-            doc.text("JayWebs Quote", 20, 30);
-            doc.setFontSize(14);
-            doc.text(quote, 20, 55);
-            doc.text("Thank you for your interest in JayWebs!", 20, 75);
-            doc.text("We'll contact you shortly to discuss your project.", 20, 88);
-            doc.save('jaywebs-quote.pdf');
-          } catch (err) {
-            console.error('PDF generation failed', err);
-            alert('Unable to generate PDF in this browser.');
-          }
+      const featureLabels = {
+        contact: 'Contact Form', booking: 'Booking System', blog: 'Blog',
+        ecommerce: 'E-Commerce', accounts: 'User Accounts', cms: 'CMS',
+        animations: 'Animations', customfn: 'Custom Functionality', other: 'Other'
+      };
+
+      const siteLabels = {
+        business: 'Business Website', ecommerce: 'E-Commerce Website',
+        landing: 'Landing Page', portfolio: 'Portfolio Website', custom: 'Custom Website'
+      };
+
+      const steps = document.querySelectorAll('.calc-step');
+      const progress = document.querySelectorAll('#calcProgress span');
+
+      function showStep(n) {
+        steps.forEach(s => s.classList.toggle('active', s.dataset.step == n));
+        progress.forEach((p, i) => {
+          p.classList.toggle('done', i < n - 1);
+          p.classList.toggle('active', i === n - 1);
         });
+        if (n === 5) updateEstimate();
       }
 
-      /* =========================================================
-         STATS COUNTER
-         ========================================================= */
-      const stats = document.querySelectorAll('.stat-number');
-      let statsDone = false;
+      document.querySelectorAll('[data-next]').forEach(btn => {
+        btn.addEventListener('click', () => showStep(parseInt(btn.dataset.next)));
+      });
+      document.querySelectorAll('[data-prev]').forEach(btn => {
+        btn.addEventListener('click', () => showStep(parseInt(btn.dataset.prev)));
+      });
 
-      function animateStats() {
-        if (statsDone) return;
-        statsDone = true;
-        stats.forEach(stat => {
-          const target = parseInt(stat.getAttribute('data-target')) || 0;
-          const duration = 1800;
-          const step = target / (duration / 16);
-          let current = 0;
-          const timer = setInterval(() => {
-            current += step;
-            if (current >= target) {
-              current = target;
-              clearInterval(timer);
-            }
-            stat.textContent = Math.floor(current);
-          }, 16);
-        });
-      }
-
-      const statsSection = document.getElementById('impact');
-      if (statsSection && 'IntersectionObserver' in window) {
-        const obs = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) { animateStats(); obs.unobserve(entry.target); }
+      document.querySelectorAll('#typeOptions input').forEach(inp => {
+        inp.addEventListener('change', () => {
+          calcState.siteType = inp.value;
+          document.querySelectorAll('#typeOptions .calc-option').forEach(o => {
+            o.classList.toggle('selected', o.contains(inp) && inp.checked);
           });
-        }, { threshold: 0.4 });
-        obs.observe(statsSection);
-      } else { animateStats(); }
+        });
+      });
+
+      document.querySelectorAll('#pagesOptions input').forEach(inp => {
+        inp.addEventListener('change', () => {
+          calcState.pages = inp.value;
+          document.querySelectorAll('#pagesOptions .calc-option').forEach(o => {
+            o.classList.toggle('selected', o.contains(inp) && inp.checked);
+          });
+        });
+      });
+
+      document.querySelectorAll('#contentOptions input').forEach(inp => {
+        inp.addEventListener('change', () => {
+          calcState.content = inp.value;
+          document.querySelectorAll('#contentOptions .calc-option').forEach(o => {
+            o.classList.toggle('selected', o.contains(inp) && inp.checked);
+          });
+        });
+      });
+
+      document.querySelectorAll('#featureOptions input').forEach(inp => {
+        inp.addEventListener('change', () => {
+          if (inp.checked) {
+            if (!calcState.features.includes(inp.value)) calcState.features.push(inp.value);
+          } else {
+            calcState.features = calcState.features.filter(f => f !== inp.value);
+          }
+          inp.closest('.calc-option').classList.toggle('selected', inp.checked);
+        });
+      });
+
+      function computeEstimate() {
+        let base = siteBase[calcState.siteType] || 2499;
+        base = base * (pageMultiplier[calcState.pages] || 1);
+        let featTotal = 0;
+        calcState.features.forEach(f => { featTotal += featurePrices[f] || 0; });
+        let contentExtra = calcState.content === 'help' ? 800 : 0;
+        return Math.round(base + featTotal + contentExtra);
+      }
+
+      function updateEstimate() {
+        const est = computeEstimate();
+        document.getElementById('calcPrice').textContent = 'R' + est.toLocaleString();
+
+        const summary = document.getElementById('calcSummary');
+        const featureList = calcState.features.length
+          ? calcState.features.map(f => featureLabels[f]).join(', ')
+          : 'None selected';
+
+        summary.innerHTML = `
+          <h4>Your selections</h4>
+          <div class="calc-summary-row"><span>Website Type</span><span>${siteLabels[calcState.siteType]}</span></div>
+          <div class="calc-summary-row"><span>Pages</span><span>${calcState.pages}</span></div>
+          <div class="calc-summary-row"><span>Features</span><span>${featureList}</span></div>
+          <div class="calc-summary-row"><span>Content</span><span>${calcState.content === 'have' ? 'Client provides' : 'JayWebs assistance'}</span></div>
+        `;
+      }
+
+      // Pre-fill quote request into contact form (just as before)
+      document.getElementById('calcRequestBtn')?.addEventListener('click', () => {
+        document.getElementById('service').value = calcState.siteType === 'ecommerce' ? 'E-Commerce' :
+                                                  calcState.siteType === 'landing' ? 'Landing Page' :
+                                                  calcState.siteType === 'portfolio' ? 'Portfolio' :
+                                                  calcState.siteType === 'custom' ? 'Custom / Other' :
+                                                  'Business Website';
+        document.getElementById('message').value =
+          `Quote calculator selections:\n` +
+          `- Website Type: ${siteLabels[calcState.siteType]}\n` +
+          `- Pages: ${calcState.pages}\n` +
+          `- Features: ${calcState.features.length ? calcState.features.map(f => featureLabels[f]).join(', ') : 'None'}\n` +
+          `- Content: ${calcState.content === 'have' ? 'I have content' : 'I need help with content'}\n` +
+          `- Estimated: R${computeEstimate().toLocaleString()}`;
+        document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
+      });
+
+      // PDF export
+      document.getElementById('downloadQuote')?.addEventListener('click', () => {
+        try {
+          const { jsPDF } = window.jspdf;
+          const doc = new jsPDF();
+          const est = computeEstimate();
+
+          doc.setFontSize(22);
+          doc.text('JayWebs', 20, 30);
+          doc.setFontSize(12);
+          doc.setTextColor(120);
+          doc.text('Modern websites for modern businesses.', 20, 40);
+          doc.setTextColor(0);
+          doc.text('Estimate — ' + new Date().toLocaleDateString(), 20, 55);
+          doc.line(20, 60, 190, 60);
+
+          doc.setFontSize(14);
+          doc.text('Your Selections', 20, 75);
+
+          doc.setFontSize(11);
+          let y = 90;
+          const rows = [
+            ['Website Type', siteLabels[calcState.siteType]],
+            ['Pages', calcState.pages],
+            ['Features', calcState.features.length ? calcState.features.map(f => featureLabels[f]).join(', ') : 'None'],
+            ['Content', calcState.content === 'have' ? 'Client provides' : 'JayWebs assistance']
+          ];
+          rows.forEach(([k, v]) => {
+            doc.text(k + ':', 20, y);
+            const wrapped = doc.splitTextToSize(String(v), 110);
+            doc.text(wrapped, 70, y);
+            y += (wrapped.length * 6) + 4;
+          });
+
+          doc.line(20, y + 5, 190, y + 5);
+          doc.setFontSize(16);
+          doc.text('Estimated Project Cost', 20, y + 20);
+          doc.setFontSize(22);
+          doc.text('R' + est.toLocaleString(), 20, y + 34);
+          doc.setFontSize(10);
+          doc.setTextColor(120);
+          doc.text('This is an estimate. Final pricing depends on project requirements.', 20, y + 48);
+          doc.text('Contact: WhatsApp +27 63 523 5951 · X: @jaywebs10', 20, y + 58);
+
+          doc.save('jaywebs-estimate.pdf');
+        } catch (err) {
+          console.error(err);
+          alert('Unable to generate PDF in this browser.');
+        }
+      });
 
       /* =========================================================
-         BOOKING FORM VALIDATION
+         CONTACT FORM → WHATSAPP SUBMISSION
          ========================================================= */
       const bookingForm = document.getElementById('booking-form');
       const dateInput = document.getElementById('date');
-      const bookingSpinner = document.getElementById('booking-spinner');
-      const bookingSuccess = document.getElementById('booking-success');
-      const bookingSubmit = document.getElementById('booking-submit');
-
-      if (dateInput) {
-        dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
-      }
+      if (dateInput) dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
 
       const validators = {
         name: () => {
@@ -1999,22 +2503,6 @@
           el.classList.toggle('error', !ok);
           err.style.display = ok ? 'none' : 'block';
           return ok;
-        },
-        date: () => {
-          const el = document.getElementById('date');
-          const err = document.getElementById('date-error');
-          const ok = el.value !== '';
-          el.classList.toggle('error', !ok);
-          err.style.display = ok ? 'none' : 'block';
-          return ok;
-        },
-        time: () => {
-          const el = document.getElementById('time');
-          const err = document.getElementById('time-error');
-          const ok = el.value !== '';
-          el.classList.toggle('error', !ok);
-          err.style.display = ok ? 'none' : 'block';
-          return ok;
         }
       };
 
@@ -2023,26 +2511,55 @@
         if (el) el.addEventListener('blur', validators[id]);
       });
       document.getElementById('service')?.addEventListener('change', validators.service);
-      document.getElementById('date')?.addEventListener('change', validators.date);
-      document.getElementById('time')?.addEventListener('change', validators.time);
 
       if (bookingForm) {
         bookingForm.addEventListener('submit', function (e) {
           e.preventDefault();
-          const valid = Object.keys(validators).every(k => validators[k]());
+          const valid = ['name', 'email', 'phone', 'service'].every(k => validators[k]());
           if (!valid) return;
 
-          bookingSpinner.style.display = 'block';
-          bookingSubmit.disabled = true;
+          const spinner = document.getElementById('booking-spinner');
+          const success = document.getElementById('booking-success');
+          const submit = document.getElementById('booking-submit');
 
+          spinner.style.display = 'block';
+          submit.disabled = true;
+
+          // Gather form data
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const phone = document.getElementById('phone').value.trim();
+          const business = document.getElementById('business').value.trim();
+          const website = document.getElementById('website').value.trim();
+          const service = document.getElementById('service').value;
+          const budget = document.getElementById('budget').value;
+          const date = document.getElementById('date').value;
+          const message = document.getElementById('message').value.trim();
+
+          // Build WhatsApp message
+          let waText = `*New Project Request — JayWebs*\n\n`;
+          waText += `*Name:* ${name}\n`;
+          waText += `*Email:* ${email}\n`;
+          waText += `*Phone:* ${phone}\n`;
+          if (business) waText += `*Business:* ${business}\n`;
+          if (website) waText += `*Website/Social:* ${website}\n`;
+          waText += `*Project Type:* ${service}\n`;
+          if (budget) waText += `*Budget:* ${budget}\n`;
+          if (date) waText += `*Preferred Start:* ${date}\n`;
+          waText += `\n*Message:*\n${message || '(no message)'}`;
+
+          const waUrl = `https://wa.me/27635235951?text=${encodeURIComponent(waText)}`;
+
+          // Open WhatsApp
           setTimeout(() => {
-            bookingSpinner.style.display = 'none';
-            bookingSuccess.style.display = 'block';
+            spinner.style.display = 'none';
+            success.style.display = 'block';
+            window.open(waUrl, '_blank');
             bookingForm.reset();
             if (dateInput) dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
-            bookingSubmit.disabled = false;
-            setTimeout(() => { bookingSuccess.style.display = 'none'; }, 5000);
-          }, 1400);
+            submit.disabled = false;
+            setTimeout(() => { success.style.display = 'none'; }, 6000);
+          }, 800);
         });
       }
 
@@ -2064,7 +2581,7 @@
         const sections = document.querySelectorAll('section[id]');
         let currentId = '';
         sections.forEach(sec => {
-          if (window.scrollY >= sec.offsetTop - 120) currentId = sec.id;
+          if (window.scrollY >= sec.offsetTop - 140) currentId = sec.id;
         });
         document.querySelectorAll('.nav-links a').forEach(a => {
           a.classList.toggle('active', a.getAttribute('href') === '#' + currentId);
@@ -2072,17 +2589,13 @@
       });
 
       /* =========================================================
-         3D CLAY SPHERE — OUR MASTERPIECES
+         3D CLAY SPHERE
          ========================================================= */
       (function initSphereGallery() {
-        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-          console.warn('GSAP / ScrollTrigger not loaded — 3D gallery skipped.');
-          return;
-        }
+        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
         gsap.registerPlugin(ScrollTrigger);
 
-        /* -------- BUSINESS IMAGES -------- */
         const IMAGES = [
           "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80&auto=format&fit=crop",
           "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80&auto=format&fit=crop",
@@ -2099,35 +2612,18 @@
         ];
 
         const TEXT_CONTENT = [
-          {
-            title: "E-Commerce Platform",
-            desc: "Modern online store with seamless user experience and secure payment integration."
-          },
-          {
-            title: "Corporate Website",
-            desc: "Professional brand presence with storytelling, lead generation, and CMS-powered content."
-          },
-          {
-            title: "SaaS Dashboard",
-            desc: "Data-driven interface with real-time analytics, clean UX, and responsive layouts."
-          },
-          {
-            title: "Restaurant Website",
-            desc: "Beautiful restaurant site with online menu, gallery, and reservation system."
-          },
-          {
-            title: "Real Estate Portal",
-            desc: "Property listings with advanced search, filtering, and map integration."
-          }
+          { title: "Business Website", desc: "Clean, credible presence designed for companies and service providers." },
+          { title: "E-Commerce Store", desc: "Product-focused layouts built to make browsing and buying simple." },
+          { title: "Landing Page", desc: "Focused pages designed for campaigns and lead generation." },
+          { title: "Portfolio", desc: "Showcase work with a layout that puts the content first." },
+          { title: "Custom Web App", desc: "Functionality built around a specific business need." }
         ];
 
         const sphere = document.getElementById('sphere');
-        const constellation = document.getElementById('constellation');
         const titleEl = document.getElementById('dynamic-title');
         const descEl = document.getElementById('dynamic-desc');
         if (!sphere) return;
 
-        /* -------- Responsive radius -------- */
         function getRadius() {
           const w = window.innerWidth;
           if (w < 360) return 150;
@@ -2139,7 +2635,6 @@
           return 380;
         }
 
-        /* -------- Responsive card size -------- */
         function applyCardSize() {
           const w = window.innerWidth;
           let cw, ch;
@@ -2159,13 +2654,11 @@
         }
 
         const galleryItems = [...IMAGES, ...IMAGES].slice(0, 24);
-
-        /* Fibonacci sphere distribution */
         let radius = getRadius();
+
         galleryItems.forEach((src, i) => {
           const card = document.createElement('div');
           card.classList.add('clay-card');
-
           const img = document.createElement('img');
           img.src = src;
           img.alt = 'JayWebs project ' + (i + 1);
@@ -2174,17 +2667,13 @@
 
           const phi = Math.acos(1 - (2 * (i + 0.5)) / galleryItems.length);
           const theta = Math.PI * (1 + Math.sqrt(5)) * i;
-
           const x = radius * Math.cos(theta) * Math.sin(phi);
           const y = radius * Math.sin(theta) * Math.sin(phi);
           const z = radius * Math.cos(phi);
-
           const rotY = Math.atan2(x, z) * (180 / Math.PI);
           const rotX = Math.asin(-y / radius) * (180 / Math.PI);
 
-          card.style.transform =
-            `translate3d(${x}px, ${y}px, ${z}px) rotateY(${rotY}deg) rotateX(${rotX}deg)`;
-
+          card.style.transform = `translate3d(${x}px, ${y}px, ${z}px) rotateY(${rotY}deg) rotateX(${rotX}deg)`;
           card.dataset.index = i;
           sphere.appendChild(card);
         });
@@ -2192,14 +2681,11 @@
         applyCardSize();
         const allCards = sphere.querySelectorAll('.clay-card');
 
-        /* Highlight + update text on scroll */
         function updateActiveCard(progress) {
           const textIndex = Math.floor(progress * TEXT_CONTENT.length) % TEXT_CONTENT.length;
-
           if (titleEl && titleEl.innerText !== TEXT_CONTENT[textIndex].title) {
             gsap.to([titleEl, descEl], {
-              opacity: 0,
-              duration: 0.2,
+              opacity: 0, duration: 0.2,
               onComplete: () => {
                 titleEl.innerText = TEXT_CONTENT[textIndex].title;
                 descEl.innerText = TEXT_CONTENT[textIndex].desc;
@@ -2207,69 +2693,21 @@
               }
             });
           }
-
           const focusIndex = Math.floor(progress * galleryItems.length);
           allCards.forEach((card, idx) => {
             card.classList.toggle('active-card', Math.abs(idx - focusIndex) < 2);
           });
         }
 
-        /* Rotate sphere on scroll */
         gsap.to(sphere, {
-          rotateY: 360 * 2,
-          rotateX: 45,
-          ease: 'none',
+          rotateY: 360 * 2, rotateX: 45, ease: 'none',
           scrollTrigger: {
             trigger: '.gallery-wrap',
-            start: 'top top',
-            end: 'bottom bottom',
-            scrub: 1,
+            start: 'top top', end: 'bottom bottom', scrub: 1,
             onUpdate: (self) => updateActiveCard(self.progress)
           }
         });
 
-        /* Constellation scatter in journey section */
-        if (constellation) {
-          const scatterPositions = [
-            { top: '12%', left: '10%' },
-            { top: '18%', left: '82%' },
-            { top: '62%', left: '8%' },
-            { top: '72%', left: '86%' },
-            { top: '84%', left: '32%' },
-            { top: '14%', left: '48%' }
-          ];
-
-          scatterPositions.forEach((pos, i) => {
-            const card = document.createElement('div');
-            card.classList.add('clay-card', 'constellation-card');
-            card.style.top = pos.top;
-            card.style.left = pos.left;
-            const rot = (Math.random() - 0.5) * 40;
-            card.style.transform = `rotate(${rot}deg) scale(0.8)`;
-
-            const img = document.createElement('img');
-            img.src = IMAGES[i % IMAGES.length];
-            img.alt = '';
-            img.loading = 'lazy';
-            card.appendChild(img);
-
-            constellation.appendChild(card);
-          });
-
-          gsap.to('.constellation-card', {
-            y: -100,
-            ease: 'none',
-            stagger: 0.1,
-            scrollTrigger: {
-              trigger: '.journey-section',
-              start: 'top bottom',
-              end: 'bottom top',
-              scrub: true
-            }
-          });
-        }
-
-        /* Recalculate on resize (debounced) */
         let resizeTimer;
         window.addEventListener('resize', () => {
           clearTimeout(resizeTimer);
@@ -2285,8 +2723,7 @@
                 const z = radius * Math.cos(phi);
                 const rotY = Math.atan2(x, z) * (180 / Math.PI);
                 const rotX = Math.asin(-y / radius) * (180 / Math.PI);
-                card.style.transform =
-                  `translate3d(${x}px, ${y}px, ${z}px) rotateY(${rotY}deg) rotateX(${rotX}deg)`;
+                card.style.transform = `translate3d(${x}px, ${y}px, ${z}px) rotateY(${rotY}deg) rotateX(${rotX}deg)`;
               });
             }
             applyCardSize();
