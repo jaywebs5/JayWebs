@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>JayWebs | Futuristic Web Design South Africa</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="JayWebs - Futuristic web design & development services in South Africa. Build a powerful online presence with our premium websites." />
+  <meta name="keywords" content="web design, South Africa, futuristic websites, premium web development, JayWebs" />
+  <meta name="author" content="JayWebs" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="JayWebs | Futuristic Web Design South Africa" />
+  <meta property="og:description" content="Build your brand and power your presence with JayWebs. Luxury, tech, and performance combined." />
+  <meta property="og:image" content="https://i.postimg.cc/8c06tqfc/83A6E605-32BD-40DB-B243-D407F4500B54.png" />
+  <meta property="og:url" content="https://www.jaywebs.site" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JayWebs | Futuristic Web Design South Africa" />
+  <meta name="twitter:description" content="Build your brand and power your presence with JayWebs. Luxury, tech, and performance combined." />
+  <meta name="twitter:image" content="https://i.postimg.cc/8c06tqfc/83A6E605-32BD-40DB-B243-D407F4500B54.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/8c06tqfc/83A6E605-32BD-40DB-B243-D407F4500B54.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       RESET & CLAY DESIGN TOKENS
+       ========================================================= */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-dark: #0a0a0b;
+      --bg-elev: #131316;
+      --text-main: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --accent: #00bfff;
+
+      /* Clay */
+      --clay-base: #18181b;
+      --clay-shadow: rgba(0, 0, 0, 0.9);
+      --clay-inset-light: rgba(255, 255, 255, 0.04);
+      --clay-inset-dark: rgba(0, 0, 0, 0.6);
+      --clay-border: rgba(255, 255, 255, 0.04);
+
+      /* Fluid spacing scale */
+      --space-xs: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+      --space-sm: clamp(0.75rem, 0.6rem + 0.75vw, 1.25rem);
+      --space-md: clamp(1.25rem, 1rem + 1.5vw, 2rem);
+      --space-lg: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+      --space-xl: clamp(3rem, 2rem + 4vw, 6rem);
+      --section-y: clamp(3.5rem, 2rem + 6vw, 7rem);
+
+      /* Fluid type scale */
+      --fs-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
+      --fs-sm: clamp(0.82rem, 0.78rem + 0.2vw, 0.92rem);
+      --fs-base: clamp(0.92rem, 0.88rem + 0.2vw, 1.02rem);
+      --fs-md: clamp(1rem, 0.92rem + 0.4vw, 1.15rem);
+      --fs-lg: clamp(1.15rem, 1rem + 0.7vw, 1.5rem);
+      --fs-xl: clamp(1.5rem, 1.2rem + 1.5vw, 2.4rem);
+      --fs-2xl: clamp(1.9rem, 1.4rem + 2.5vw, 3rem);
+      --fs-3xl: clamp(2.2rem, 1.5rem + 4vw, 4.5rem);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      font-size: var(--fs-base);
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+
+    /* Clinical SaaS grid overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    a { color: inherit; text-decoration: none; transition: color 0.25s ease; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+    button { font-family: inherit; }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0);
+    }
+
+    /* =========================================================
+       TYPOGRAPHY
+       ========================================================= */
+    h1, h2, h3 { font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; }
+
+    .section-head { text-align: center; margin-bottom: var(--space-lg); }
+
+    .section-title {
+      font-size: var(--fs-2xl);
+      margin: var(--space-sm) 0 0.75rem;
+      color: var(--text-main);
+    }
+
+    .section-sub {
+      color: var(--text-muted);
+      font-size: var(--fs-base);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* =========================================================
+       CONTAINER — adapts to all screens
+       ========================================================= */
+    .container {
+      width: 100%;
+      max-width: min(1200px, 92vw);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      padding-left: clamp(0.75rem, 2vw, 1.5rem);
+      padding-right: clamp(0.75rem, 2vw, 1.5rem);
+    }
+
+    section { position: relative; z-index: 1; }
+
+    .section-padding { padding: var(--section-y) 0; }
+
+    /* =========================================================
+       CLAY UTILITIES
+       ========================================================= */
+    .clay {
+      background: var(--clay-base);
+      border-radius: clamp(16px, 2vw, 22px);
+      border: 1px solid var(--clay-border);
+      box-shadow:
+        8px 8px 20px var(--clay-shadow),
+        -4px -4px 12px rgba(255, 255, 255, 0.02),
+        inset 3px 3px 6px var(--clay-inset-light),
+        inset -3px -3px 6px var(--clay-inset-dark);
+    }
+
+    .chunky-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: clamp(0.75rem, 1.5vw, 0.9rem) clamp(1.25rem, 3vw, 1.9rem);
+      border-radius: 40px;
+      background: var(--text-main);
+      color: var(--bg-dark);
+      font-weight: 600;
+      font-size: var(--fs-sm);
+      letter-spacing: -0.01em;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      text-align: center;
+      min-height: 44px;
+      box-shadow:
+        0px 4px 0px rgba(161, 161, 170, 0.4),
+        0px 6px 12px rgba(0, 0, 0, 0.5),
+        inset 0px -2px 5px rgba(0, 0, 0, 0.1),
+        inset 0px 2px 5px rgba(255, 255, 255, 0.8);
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                  background 0.25s ease, color 0.25s ease;
+    }
+    .chunky-btn:hover { background: var(--accent); color: var(--bg-dark); }
+    .chunky-btn:active {
+      transform: translateY(4px);
+      box-shadow:
+        0px 0px 0px rgba(161, 161, 170, 0.4),
+        0px 2px 5px rgba(0, 0, 0, 0.4),
+        inset 0px -1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .chunky-btn.ghost {
+      background: var(--clay-base);
+      color: var(--text-main);
+      box-shadow:
+        0px 4px 0px #09090a,
+        0px 6px 12px rgba(0, 0, 0, 0.6),
+        inset 1px 1px 2px var(--clay-inset-light),
+        inset -1px -1px 2px var(--clay-inset-dark);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .chunky-btn.ghost:hover { color: var(--accent); background: var(--clay-base); }
+
+    .chunky-badge {
+      display: inline-block;
+      background: var(--clay-base);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: var(--fs-xs);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border: 1px solid var(--clay-border);
+      box-shadow:
+        4px 4px 10px var(--clay-shadow),
+        inset 2px 2px 4px var(--clay-inset-light),
+        inset -2px -2px 4px var(--clay-inset-dark);
+    }
+
+    /* =========================================================
+       NAVBAR
+       ========================================================= */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: clamp(0.75rem, 1.5vw, 1.1rem) clamp(1rem, 3vw, 2.5rem);
+      padding-top: calc(clamp(0.75rem, 1.5vw, 1.1rem) + env(safe-area-inset-top));
+      z-index: 1000;
+      background: linear-gradient(to bottom,
+        rgba(10, 10, 11, 0.92),
+        rgba(10, 10, 11, 0.65) 60%,
+        transparent);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: transform 0.4s ease;
+    }
+    .navbar.hidden { transform: translateY(-100%); }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      font-size: var(--fs-md);
+      color: var(--text-main);
+      flex-shrink: 0;
+    }
+
+  .logo img {
+  height: clamp(48px, 6vw, 68px);
+  width: auto;
+  max-width: clamp(180px, 28vw, 260px);
+  object-fit: contain;
+  opacity: 1;
+  filter: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: block;
+}
+    .logo:hover img {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+
+    .logo span {
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      font-size: var(--fs-md);
+      color: var(--text-main);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      background: var(--clay-base);
+      padding: 0.4rem 0.6rem;
+      border-radius: 40px;
+      box-shadow:
+        4px 4px 10px var(--clay-shadow),
+        inset 1px 1px 2px var(--clay-inset-light),
+        inset -1px -1px 2px var(--clay-inset-dark);
+      border: 1px solid rgba(255, 255, 255, 0.02);
+    }
+
+    .nav-links a {
+      font-size: var(--fs-xs);
+      color: var(--text-muted);
+      padding: 0.5rem 0.75rem;
+      border-radius: 30px;
+      transition: color 0.2s ease, background 0.2s ease;
+      white-space: nowrap;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .menu-btn {
+      display: none;
+      background: var(--clay-base);
+      color: var(--text-main);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      padding: 0.65rem 0.85rem;
+      font-size: 1rem;
+      cursor: pointer;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      box-shadow:
+        0px 4px 0px #09090a,
+        0px 6px 12px rgba(0, 0, 0, 0.6),
+        inset 1px 1px 2px var(--clay-inset-light);
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+    .hero {
+      position: relative;
+      padding: clamp(7rem, 12vw, 11rem) clamp(1rem, 3vw, 2rem) clamp(3rem, 6vw, 6rem);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-sm);
+      background: radial-gradient(ellipse at 50% 0%,
+        rgba(0, 191, 255, 0.07),
+        transparent 60%);
+      min-height: 100svh;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-size: var(--fs-3xl);
+      max-width: 900px;
+      letter-spacing: -0.045em;
+      line-height: 1.03;
+      color: var(--text-main);
+    }
+
+    .hero .hero-sub {
+      color: var(--text-muted);
+      max-width: 520px;
+      font-size: var(--fs-md);
+      padding: 0 0.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 0.5rem;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .hero-actions .chunky-btn {
+      flex: 1 1 auto;
+      min-width: 180px;
+    }
+
+    /* =========================================================
+       ABOUT
+       ========================================================= */
+    .about-text {
+      max-width: 760px;
+      margin: 0 auto var(--space-md);
+      font-size: var(--fs-md);
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.75;
+    }
+
+    .about-quote {
+      text-align: center;
+      font-size: var(--fs-lg);
+      color: var(--text-main);
+      margin: 0 auto var(--space-lg);
+      max-width: 620px;
+      font-style: italic;
+      letter-spacing: -0.01em;
+      padding: 0 0.5rem;
+    }
+
+    .owner-card {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2.5rem);
+      text-align: center;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .owner-card:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        12px 14px 30px var(--clay-shadow),
+        -4px -4px 12px rgba(255, 255, 255, 0.02),
+        inset 3px 3px 6px var(--clay-inset-light),
+        inset -3px -3px 6px var(--clay-inset-dark);
+    }
+    .owner-card h3 {
+      font-size: var(--fs-lg);
+      margin-bottom: 0.4rem;
+    }
+    .owner-card h4 {
+      font-size: var(--fs-base);
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.02em;
+    }
+    .owner-card p {
+      color: var(--text-muted);
+      font-size: var(--fs-sm);
+      line-height: 1.7;
+    }
+
+    /* =========================================================
+       3D CLAY SPHERE — OUR MASTERPIECES
+       ========================================================= */
+    .gallery-wrap {
+      position: relative;
+      height: 300vh;
+      width: 100%;
+      background: radial-gradient(circle at 50% 45%, #131316 0%, var(--bg-dark) 70%);
+    }
+
+    .scene {
+      position: sticky;
+      top: 0;
+      height: 100svh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1200px;
+      overflow: hidden;
+    }
+
+    .sphere {
+      position: relative;
+      width: 0;
+      height: 0;
+      transform-style: preserve-3d;
+      z-index: 2;
+      /* Dynamic scale so sphere fits any screen */
+      transform-origin: center center;
+    }
+
+    .clay-card {
+      position: absolute;
+      width: 170px;
+      height: 230px;
+      left: -85px;
+      top: -115px;
+      background: var(--clay-base);
+      border-radius: 16px;
+      padding: 8px;
+      transform-style: preserve-3d;
+      backface-visibility: visible;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      box-shadow:
+        8px 8px 16px var(--clay-shadow),
+        -4px -4px 10px rgba(255, 255, 255, 0.02),
+        inset 3px 3px 6px var(--clay-inset-light),
+        inset -3px -3px 6px var(--clay-inset-dark);
+      transition: filter 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .clay-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      filter: grayscale(80%) brightness(0.55);
+      transition: filter 0.4s ease;
+      box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .clay-card.active-card {
+      filter: drop-shadow(0 0 24px rgba(0, 191, 255, 0.22));
+      z-index: 5;
+    }
+    .clay-card.active-card img {
+      filter: grayscale(0%) brightness(1);
+    }
+
+    .floating-text {
+      position: absolute;
+      left: 6%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: min(340px, 30vw);
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .floating-text h2 {
+      font-size: var(--fs-xl);
+      line-height: 1.1;
+      margin: 1.25rem 0 0.75rem;
+      color: var(--text-main);
+      letter-spacing: -0.035em;
+    }
+
+    .floating-text p {
+      color: var(--text-muted);
+      font-size: var(--fs-sm);
+      line-height: 1.65;
+    }
+
+    .scroll-hint {
+      margin-top: 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: var(--fs-xs);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      opacity: 0.7;
+      animation: bob 2.4s ease-in-out infinite;
+    }
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
+    /* =========================================================
+       TESTIMONIALS
+       ========================================================= */
+    .testimonials { background: transparent; }
+
+    .testimonial {
+      background: var(--clay-base);
+      border-radius: clamp(16px, 2vw, 20px);
+      padding: clamp(1.75rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 2rem);
+      text-align: center;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--clay-border);
+      box-shadow:
+        8px 8px 20px var(--clay-shadow),
+        -4px -4px 12px rgba(255, 255, 255, 0.02),
+        inset 3px 3px 6px var(--clay-inset-light),
+        inset -3px -3px 6px var(--clay-inset-dark);
+      transition: transform 0.35s ease;
+    }
+    .testimonial:hover { transform: translateY(-6px); }
+
+    .testimonial-photo {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      object-fit: cover;
+      filter: grayscale(100%);
+    }
+
+    .testimonial blockquote {
+      font-style: italic;
+      margin-bottom: 1.25rem;
+      font-size: var(--fs-base);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .testimonial cite {
+      font-weight: 600;
+      color: var(--text-muted);
+      font-style: normal;
+      font-size: var(--fs-xs);
+      letter-spacing: 0.05em;
+    }
+
+    .testimonials-pagination .swiper-pagination-bullet {
+      background: var(--text-muted);
+      opacity: 0.5;
+    }
+    .testimonials-pagination .swiper-pagination-bullet-active {
+      background: var(--text-main);
+      opacity: 1;
+    }
+
+    /* =========================================================
+       PRICING — auto-fit grid
+       ========================================================= */
+    .pricing-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: clamp(1.25rem, 3vw, 2rem);
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .pricing-box {
+      background: var(--clay-base);
+      border: 1px solid var(--clay-border);
+      border-radius: clamp(16px, 2vw, 22px);
+      padding: clamp(1.75rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 2rem);
+      text-align: center;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      box-shadow:
+        8px 8px 20px var(--clay-shadow),
+        -4px -4px 12px rgba(255, 255, 255, 0.02),
+        inset 3px 3px 6px var(--clay-inset-light),
+        inset -3px -3px 6px var(--clay-inset-dark);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .pricing-box:hover {
+      transform: translateY(-8px);
+      box-shadow:
+        12px 16px 34px var(--clay-shadow),
+        -4px -4px 14px rgba(255, 255, 255, 0.03),
+        inset 3px 3px 6px var(--clay-inset-light),
+        inset -3px -3px 6px var(--clay-inset-dark);
+    }
+
+    .pricing-box h3 {
+      font-size: var(--fs-lg);
+      margin-bottom: 1rem;
+    }
+
+    .pricing-box .price {
+      font-size: clamp(2rem, 5vw, 2.4rem);
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.5rem;
+      color: var(--text-main);
+    }
+
+    .pricing-box p {
+      font-size: var(--fs-sm);
+      margin-bottom: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .pricing-box .chunky-btn {
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+
+    /* =========================================================
+       STATS
+       ========================================================= */
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+      gap: clamp(1rem, 2.5vw, 1.5rem);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .stat {
+      text-align: center;
+      padding: clamp(1.5rem, 3.5vw, 2.25rem) clamp(1rem, 2.5vw, 1.75rem);
+      border-radius: clamp(16px, 2vw, 22px);
+      background: var(--clay-base);
+      border: 1px solid var(--clay-border);
+      box-shadow:
+        8px 8px 20px var(--clay-shadow),
+        -4px -4px 12px rgba(255, 255, 255, 0.02),
+        inset 3px 3px 6px var(--clay-inset-light),
+        inset -3px -3px 6px var(--clay-inset-dark);
+      transition: transform 0.35s ease;
+    }
+    .stat:hover { transform: translateY(-6px); }
+
+    .stat-number {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: -0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-label {
+      font-size: var(--fs-xs);
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* =========================================================
+       FAQ
+       ========================================================= */
+    .faq-container { max-width: 780px; margin: 0 auto; }
+
+    .faq-item { margin-bottom: 1rem; }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: var(--clay-base);
+      border: 1px solid var(--clay-border);
+      color: var(--text-main);
+      font-weight: 500;
+      padding: clamp(1rem, 2.5vw, 1.4rem) clamp(1rem, 3vw, 1.6rem);
+      cursor: pointer;
+      border-radius: clamp(14px, 2vw, 18px);
+      transition: all 0.25s ease;
+      font-size: var(--fs-base);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: inherit;
+      gap: 1rem;
+      box-shadow:
+        6px 6px 16px var(--clay-shadow),
+        -3px -3px 10px rgba(255, 255, 255, 0.02),
+        inset 2px 2px 5px var(--clay-inset-light),
+        inset -2px -2px 5px var(--clay-inset-dark);
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 1.4rem;
+      transition: transform 0.3s ease;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .faq-question.active::after {
+      content: '−';
+      color: var(--accent);
+    }
+
+    .faq-question:hover { color: var(--text-main); }
+
+    .faq-answer {
+      display: none;
+      padding: 1.4rem 1.6rem;
+      color: var(--text-muted);
+      font-size: var(--fs-sm);
+      line-height: 1.7;
+      border-left: 2px solid rgba(255, 255, 255, 0.05);
+      margin: 0.5rem 0 0 1rem;
+    }
+
+    /* =========================================================
+       CALCULATOR
+       ========================================================= */
+    .calculator-container {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.25rem, 3.5vw, 2.25rem);
+      text-align: center;
+      border-radius: clamp(18px, 2vw, 22px);
+    }
+
+    .calculator-container h2 {
+      margin-bottom: 2rem;
+      font-size: var(--fs-lg);
+    }
+
+    .calculator-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: left;
+    }
+
+    .calculator-container label {
+      font-weight: 500;
+      font-size: var(--fs-xs);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .calculator-container select,
+    .booking-container input,
+    .booking-container select,
+    .booking-container textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: #0f0f11;
+      color: var(--text-main);
+      font-size: var(--fs-sm);
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+      box-shadow:
+        inset 3px 3px 6px rgba(0, 0, 0, 0.7),
+        inset -1px -1px 3px rgba(255, 255, 255, 0.02);
+    }
+
+    .calculator-container select:focus,
+    .booking-container input:focus,
+    .booking-container select:focus,
+    .booking-container textarea:focus {
+      border-color: rgba(0, 191, 255, 0.5);
+      box-shadow:
+        inset 3px 3px 6px rgba(0, 0, 0, 0.7),
+        0 0 0 3px rgba(0, 191, 255, 0.08);
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .features label {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-weight: 400;
+      font-size: var(--fs-sm);
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--text-main);
+      cursor: pointer;
+      padding: 0.7rem 1rem;
+      border-radius: 12px;
+      background: #0f0f11;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      transition: border-color 0.2s ease;
+      margin-bottom: 0;
+      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    .features label:hover { border-color: rgba(0, 191, 255, 0.3); }
+
+    .features input[type="checkbox"] {
+      cursor: pointer;
+      accent-color: var(--accent);
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .result {
+      margin-top: 1.25rem;
+      font-size: var(--fs-md);
+      font-weight: 500;
+      padding: 1.1rem;
+      border-radius: 16px;
+      background: #0f0f11;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+      box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(0, 191, 255, 0.15);
+    }
+
+    /* =========================================================
+       BOOKING
+       ========================================================= */
+    .booking-container {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.25rem, 3.5vw, 2.5rem);
+      border-radius: clamp(18px, 2vw, 22px);
+    }
+
+    .booking-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .booking-container label {
+      font-weight: 500;
+      font-size: var(--fs-xs);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .booking-container textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    /* Validation */
+    .form-group { position: relative; }
+
+    .error-message {
+      color: #ff6b6b;
+      font-size: var(--fs-xs);
+      margin-top: 0.4rem;
+      display: none;
+    }
+
+    input.error, select.error, textarea.error {
+      border-color: #ff6b6b !important;
+    }
+
+    .success-message {
+      background-color: rgba(46, 204, 113, 0.08);
+      border: 1px solid rgba(46, 204, 113, 0.4);
+      color: #2ecc71;
+      padding: 1rem;
+      border-radius: 14px;
+      font-size: var(--fs-sm);
+      margin-top: 0.5rem;
+      display: none;
+    }
+
+    /* =========================================================
+       CONTACT
+       ========================================================= */
+    #contact { text-align: center; padding-bottom: var(--section-y); }
+
+    .social-icons {
+      margin-top: var(--space-lg);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: clamp(0.75rem, 2vw, 1.25rem);
+    }
+
+    .social-icons a {
+      font-size: clamp(1.1rem, 2vw, 1.25rem);
+      color: var(--text-main);
+      width: clamp(50px, 10vw, 60px);
+      height: clamp(50px, 10vw, 60px);
+      border-radius: clamp(16px, 2vw, 20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--clay-base);
+      border: 1px solid var(--clay-border);
+      box-shadow:
+        6px 6px 14px var(--clay-shadow),
+        -3px -3px 8px rgba(255, 255, 255, 0.02),
+        inset 2px 2px 5px var(--clay-inset-light),
+        inset -2px -2px 5px var(--clay-inset-dark);
+      transition: transform 0.25s ease, color 0.25s ease;
+    }
+    .social-icons a:hover {
+      color: var(--accent);
+      transform: translateY(-5px);
+    }
+
+    /* =========================================================
+       JOURNEY / FINAL CTA
+       ========================================================= */
+    .journey-section {
+      position: relative;
+      min-height: 80svh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #131316 0%, var(--bg-dark) 70%);
+      padding: var(--section-y) clamp(1rem, 3vw, 1.5rem);
+    }
+
+    .journey-content {
+      text-align: center;
+      z-index: 2;
+      padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 2.5rem);
+      border-radius: clamp(20px, 3vw, 26px);
+      max-width: 620px;
+      width: 100%;
+      background: rgba(24, 24, 27, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--clay-border);
+      box-shadow:
+        12px 12px 30px var(--clay-shadow),
+        -4px -4px 14px rgba(255, 255, 255, 0.02),
+        inset 3px 3px 6px var(--clay-inset-light),
+        inset -3px -3px 6px var(--clay-inset-dark);
+    }
+
+    .journey-content h2 {
+      font-size: var(--fs-xl);
+      margin: 1rem 0 0.75rem;
+      color: var(--text-main);
+    }
+
+    .journey-content p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      font-size: var(--fs-base);
+    }
+
+    .constellation {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .constellation-card {
+      position: absolute;
+      width: 100px;
+      height: 140px;
+      opacity: 0.35;
+      left: auto;
+      top: auto;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    footer {
+      padding: clamp(1.75rem, 4vw, 2.5rem) 1rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
+      font-size: var(--fs-xs);
+      padding-bottom: calc(clamp(1.75rem, 4vw, 2.5rem) + env(safe-area-inset-bottom));
+    }
+
+    /* =========================================================
+       FLOATING BUTTONS
+       ========================================================= */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(90px + env(safe-area-inset-bottom));
+      right: clamp(12px, 2vw, 22px);
+      background: #25d366;
+      color: #fff;
+      border-radius: 16px;
+      padding: 12px 14px;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      min-width: 48px;
+      min-height: 48px;
+      box-shadow:
+        0px 4px 0px #128c3e,
+        0px 8px 18px rgba(0, 0, 0, 0.5);
+      transition: transform 0.25s ease;
+    }
+    .whatsapp-float:hover { transform: translateY(-4px) scale(1.05); color: #fff; }
+    .whatsapp-float:active { transform: translateY(2px); box-shadow: 0px 2px 0px #128c3e, 0px 4px 10px rgba(0,0,0,0.5); }
+
+    .sticky-contact-btn {
+      position: fixed;
+      bottom: calc(20px + env(safe-area-inset-bottom));
+      right: clamp(12px, 2vw, 22px);
+      background: var(--text-main);
+      color: var(--bg-dark);
+      padding: 12px 18px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: var(--fs-xs);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 9999;
+      font-family: inherit;
+      min-height: 48px;
+      box-shadow:
+        0px 4px 0px rgba(161, 161, 170, 0.5),
+        0px 8px 18px rgba(0, 0, 0, 0.55),
+        inset 0px -2px 5px rgba(0, 0, 0, 0.1),
+        inset 0px 2px 5px rgba(255, 255, 255, 0.8);
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+    .sticky-contact-btn:hover { background: var(--accent); color: var(--bg-dark); }
+    .sticky-contact-btn:active { transform: translateY(4px); box-shadow: 0px 0px 0px rgba(161,161,170,0.5), 0px 2px 5px rgba(0,0,0,0.4); }
+
+    /* =========================================================
+       LOADING SPINNER
+       ========================================================= */
+    .loading-spinner {
+      display: none;
+      width: 34px;
+      height: 34px;
+      margin: 12px auto;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      border-top-color: var(--accent);
+      animation: spin 0.9s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* =========================================================
+       RESPONSIVE — Mobile nav & sphere scaling
+       ========================================================= */
+
+    /* Tablet & below — collapse nav into a dropdown */
+    @media (max-width: 1024px) {
+      .nav-links a { font-size: 0.72rem; padding: 0.45rem 0.7rem; }
+      .floating-text { left: 4%; width: min(280px, 34vw); }
+    }
+
+    /* Nav dropdown kicks in earlier because there are 9 links */
+    @media (max-width: 1100px) {
+      .menu-btn { display: inline-flex; }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: clamp(0.75rem, 2vw, 1.25rem);
+        left: auto;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.75rem;
+        border-radius: 20px;
+        width: min(260px, calc(100vw - 1.5rem));
+        gap: 0.15rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-12px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+        box-shadow:
+          0 20px 40px rgba(0,0,0,0.6),
+          inset 1px 1px 2px var(--clay-inset-light),
+          inset -1px -1px 2px var(--clay-inset-dark);
+      }
+      .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .nav-links a {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+        border-radius: 14px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    /* Tablet portrait */
+    @media (max-width: 900px) {
+      .gallery-wrap { height: 260vh; }
+
+      .clay-card {
+        width: 120px;
+        height: 165px;
+        left: -60px;
+        top: -82px;
+      }
+
+      .floating-text {
+        left: 6%;
+        right: 6%;
+        width: auto;
+        top: auto;
+        bottom: 6%;
+        transform: none;
+        text-align: center;
+        pointer-events: auto;
+        max-width: 520px;
+        margin: 0 auto;
+      }
+
+      .floating-text h2 { font-size: 1.5rem; }
+
+      .hero-actions .chunky-btn { min-width: 160px; }
+    }
+
+    /* Large phones / small tablets */
+    @media (max-width: 640px) {
+      .hero { padding-top: clamp(6rem, 18vw, 8rem); }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 340px;
+      }
+      .hero-actions .chunky-btn { width: 100%; min-width: 0; }
+
+      .gallery-wrap { height: 220vh; }
+
+      .clay-card {
+        width: 100px;
+        height: 140px;
+        left: -50px;
+        top: -70px;
+      }
+
+      .floating-text {
+        bottom: 5%;
+        padding: 0 0.5rem;
+      }
+      .floating-text h2 { font-size: 1.25rem; }
+      .floating-text p { font-size: 0.8rem; }
+      .scroll-hint { font-size: 0.62rem; margin-top: 0.75rem; }
+
+      .constellation-card { width: 70px; height: 100px; }
+
+      .journey-section { min-height: 70svh; }
+
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .stats-container .stat:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* Small phones (375px & below) */
+    @media (max-width: 420px) {
+      .logo span { display: none; }
+
+      .hero h1 { font-size: clamp(1.8rem, 9vw, 2.4rem); }
+
+      .section-title { font-size: clamp(1.5rem, 7vw, 2rem); }
+
+      .chunky-badge {
+        font-size: 0.62rem;
+        padding: 0.4rem 0.75rem;
+        letter-spacing: 0.1em;
+      }
+
+      .pricing-container {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+      .stats-container .stat:last-child { grid-column: auto; }
+
+      .social-icons a {
+        width: 46px;
+        height: 46px;
+        font-size: 1rem;
+      }
+
+      .sticky-contact-btn {
+        padding: 10px 14px;
+        font-size: 0.72rem;
+      }
+      .sticky-contact-btn i { font-size: 0.9rem; }
+
+      .whatsapp-float {
+        padding: 10px 12px;
+        font-size: 1.05rem;
+        min-width: 44px;
+        min-height: 44px;
+      }
+
+      .faq-answer { padding: 1rem 1rem; font-size: 0.82rem; margin-left: 0.5rem; }
+    }
+
+    /* Tiny screens (320px) */
+    @media (max-width: 360px) {
+      :root {
+        --space-lg: 1.5rem;
+        --section-y: 3rem;
+      }
+
+      .logo img { height: 32px; max-width: 100px; }
+
+      .hero { padding-top: 5.5rem; }
+
+      .chunky-btn {
+        font-size: 0.78rem;
+        padding: 0.7rem 1.1rem;
+      }
+
+      .booking-container,
+      .calculator-container,
+      .owner-card {
+        padding: 1.25rem 1rem;
+      }
+    }
+
+    /* Landscape phones */
+    @media (max-height: 500px) and (orientation: landscape) {
+      .hero {
+        min-height: auto;
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+      }
+
+      .scene { height: 120svh; }
+
+      .gallery-wrap { height: 200vh; }
+    }
+
+    /* Ultrawide screens */
+    @media (min-width: 1600px) {
+      .container { max-width: 1300px; }
+    }
+    @media (min-width: 1920px) {
+      .container { max-width: 1400px; }
+      .hero h1 { max-width: 1100px; }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .gallery-wrap { height: auto; padding: 5rem 0; }
+      .scene { position: relative; height: auto; }
+      .sphere { display: none; }
+      .floating-text {
+        position: relative;
+        left: auto; top: auto; bottom: auto; right: auto;
+        transform: none;
+        margin: 0 auto;
+        text-align: center;
+        pointer-events: auto;
+        width: 90%;
+      }
+      .scroll-hint { display: none; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =============================
+       NAVBAR
+       ============================= -->
+  <nav class="navbar" id="mainHeader">
+    <a href="#home" class="logo">
+      <img src="https://i.postimg.cc/SQJHd3P3/FF369872-B995-4943-8981-FDB5859BE291.png" alt="JayWebs Logo">
+     
+    </a>
+
+    <ul class="nav-links" id="mainNav">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Work</a></li>
+      <li><a href="#testimonials">Feedback</a></li>
+      <li><a href="#pricing">Services</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#quote">Quote</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="menu-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <!-- =============================
+       HERO
+       ============================= -->
+  <section class="hero" id="home">
+    <span class="chunky-badge" data-aos="fade-up">Futuristic Web Design · South Africa</span>
+    <h1 data-aos="fade-up" data-aos-delay="100">Build a powerful online presence.</h1>
+    <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
+      Luxury, tech, and performance combined — JayWebs crafts websites that move brands forward.
+    </p>
+    <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+      <button class="chunky-btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+        Book a Consultation <i class="fas fa-arrow-right"></i>
+      </button>
+      <button class="chunky-btn ghost" onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">
+        View Our Work
+      </button>
+    </div>
+  </section>
+
+  <!-- =============================
+       ABOUT
+       ============================= -->
+  <section class="section-padding" id="about">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="chunky-badge">About JayWebs</span>
+        <h2 class="section-title">Where digital dreams become stunning realities.</h2>
+      </div>
+
+      <p class="about-text" data-aos="fade-up" data-aos-delay="100">
+        JayWebs is a premium web design and development agency based in South Africa, specializing in creating luxurious,
+        high-performing, and user-friendly websites. Our mission is to bring your digital vision to life with cutting-edge
+        design, flawless functionality, and results-driven strategies. We believe in innovation, attention to detail,
+        and delivering beyond expectations.
+      </p>
+
+      <p class="about-quote" data-aos="fade-up" data-aos-delay="150">
+        "Fuel your brand. Power your presence."
+      </p>
+
+      <div class="owner-card clay" data-aos="fade-up" data-aos-delay="200">
+        <h3>Meet the Visionary</h3>
+        <h4>Jaden Nkuna</h4>
+        <p>
+          Jaden is the creative force behind JayWebs, with years of experience in web design, branding, and digital
+          marketing. His passion for excellence and eye for detail ensure that every JayWebs project stands out as a
+          masterpiece in the online world.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       OUR MASTERPIECES — 3D SCROLL GALLERY
+       ============================= -->
+  <section class="gallery-wrap" id="portfolio" aria-label="Our Masterpieces">
+    <h2 class="sr-only">Our Masterpieces</h2>
+    <div class="scene">
+      <div class="sphere" id="sphere"></div>
+
+      <div class="floating-text">
+        <span class="chunky-badge">Our Masterpieces</span>
+        <h2 id="dynamic-title">E-Commerce Platform</h2>
+        <p id="dynamic-desc">Modern online store with seamless user experience and secure payment integration.</p>
+        <div class="scroll-hint">
+          <i class="fas fa-arrow-down"></i>
+          Scroll to explore
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       TESTIMONIALS
+       ============================= -->
+  <section class="section-padding" id="testimonials">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="chunky-badge">Client Feedback</span>
+        <h2 class="section-title">Client love stories</h2>
+        <p class="section-sub">Real words from real businesses we've helped grow online.</p>
+      </div>
+
+      <div class="swiper testimonials-swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide testimonial">
+            <img src="https://placehold.co/100x100/18181b/f4f4f5?text=N" alt="Mr. Ndlovu" class="testimonial-photo"/>
+            <blockquote>"JayWebs built my business site fast and beautiful. Highly recommended!"</blockquote>
+            <cite>— MR. NDLOVU</cite>
+          </div>
+          <div class="swiper-slide testimonial">
+            <img src="https://placehold.co/100x100/18181b/f4f4f5?text=M" alt="Mpho D." class="testimonial-photo"/>
+            <blockquote>"Professional and affordable. My sales increased within a month."</blockquote>
+            <cite>— MPHO D.</cite>
+          </div>
+          <div class="swiper-slide testimonial">
+            <img src="https://placehold.co/100x100/18181b/f4f4f5?text=S" alt="Sarah K." class="testimonial-photo"/>
+            <blockquote>"Exceptional service and attention to detail. Will definitely work with them again."</blockquote>
+            <cite>— SARAH K.</cite>
+          </div>
+          <div class="swiper-slide testimonial">
+            <img src="https://placehold.co/100x100/18181b/f4f4f5?text=D" alt="David T." class="testimonial-photo"/>
+            <blockquote>"The website exceeded my expectations. Great communication throughout the process."</blockquote>
+            <cite>— DAVID T.</cite>
+          </div>
+          <div class="swiper-slide testimonial">
+            <img src="https://placehold.co/100x100/18181b/f4f4f5?text=L" alt="Lisa M." class="testimonial-photo"/>
+            <blockquote>"Fast turnaround and excellent support. My business looks professional online now."</blockquote>
+            <cite>— LISA M.</cite>
+          </div>
+        </div>
+        <div class="testimonials-pagination swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       SERVICES / PRICING
+       ============================= -->
+  <section class="section-padding" id="pricing">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="chunky-badge">Signature Services</span>
+        <h2 class="section-title">Pick the plan that fits your ambition.</h2>
+        <p class="section-sub">Transparent pricing, no hidden fees. Every plan is built for performance.</p>
+      </div>
+
+      <div class="pricing-container">
+        <div class="pricing-box" data-aos="fade-up" data-aos-delay="100">
+          <h3>Basic</h3>
+          <div class="price">R2,099</div>
+          <p>1 Page Design</p>
+          <p>Responsive Layout</p>
+          <p>Basic SEO</p>
+          <p>Contact Form</p>
+          <button class="chunky-btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Select Plan</button>
+        </div>
+
+        <div class="pricing-box" data-aos="fade-up" data-aos-delay="200">
+          <h3>Standard</h3>
+          <div class="price">R3,499</div>
+          <p>3 Pages</p>
+          <p>Contact Form &amp; SEO</p>
+          <p>Social Media Integration</p>
+          <p>1 Month Support</p>
+          <button class="chunky-btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Select Plan</button>
+        </div>
+
+        <div class="pricing-box" data-aos="fade-up" data-aos-delay="300">
+          <h3>Premium</h3>
+          <div class="price">R6,999</div>
+          <p>Full Website + Blog</p>
+          <p>E-commerce Functionality</p>
+          <p>Advanced SEO</p>
+          <p>Ongoing Support</p>
+          <button class="chunky-btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Select Plan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       BOOKING
+       ============================= -->
+  <section class="section-padding" id="booking">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="chunky-badge">Book Now</span>
+        <h2 class="section-title">Book your digital transformation.</h2>
+        <p class="section-sub">Tell us about your project and we'll be in touch within 24 hours.</p>
+      </div>
+
+      <div class="booking-container clay" data-aos="fade-up" data-aos-delay="100">
+        <form id="booking-form" netlify>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            <div class="error-message" id="name-error">Please enter your full name</div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error-message" id="email-error">Please enter a valid email address</div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+            <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option value="basic">Basic Plan (R2,099)</option>
+              <option value="standard">Standard Plan (R3,499)</option>
+              <option value="premium">Premium Plan (R6,999)</option>
+              <option value="custom">Custom Solution</option>
+            </select>
+            <div class="error-message" id="service-error">Please select a service</div>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+            <div class="error-message" id="date-error">Please select a valid date</div>
+          </div>
+
+          <div class="form-group">
+            <label for="time">Preferred Time</label>
+            <select id="time" name="time" required>
+              <option value="">Select a time</option>
+              <option value="09:00">09:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="13:00">01:00 PM</option>
+              <option value="14:00">02:00 PM</option>
+              <option value="15:00">03:00 PM</option>
+              <option value="16:00">04:00 PM</option>
+            </select>
+            <div class="error-message" id="time-error">Please select a time</div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Vision</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project dreams..."></textarea>
+          </div>
+
+          <div class="loading-spinner" id="booking-spinner"></div>
+          <div class="success-message" id="booking-success">
+            Thank you for your booking! We will contact you shortly to confirm your consultation.
+          </div>
+
+          <button type="submit" id="booking-submit" class="chunky-btn" style="width:100%;">
+            Begin Your Journey <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       STATS / IMPACT
+       ============================= -->
+  <section class="section-padding" id="impact">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="chunky-badge">Our Digital Footprint</span>
+        <h2 class="section-title">Numbers that speak.</h2>
+      </div>
+
+      <div class="stats-container">
+        <div class="stat" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Websites Built</div>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number" data-target="12">0</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number" data-target="99">0</div>
+          <div class="stat-label">Satisfaction %</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       FAQ
+       ============================= -->
+  <section class="section-padding" id="faq">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="chunky-badge">FAQ</span>
+        <h2 class="section-title">Frequently asked questions.</h2>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
+          <button class="faq-question">How long does a website build take?</button>
+          <div class="faq-answer">
+            Typically between 2–4 weeks depending on complexity and features. We work closely with you to ensure
+            timely delivery without compromising quality.
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+          <button class="faq-question">Do you offer support after launch?</button>
+          <div class="faq-answer">
+            Yes, we provide ongoing support packages for maintenance, updates, and technical assistance.
+            Our support plans are tailored to your specific needs.
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+          <button class="faq-question">Can I update my website content myself?</button>
+          <div class="faq-answer">
+            Absolutely! We provide a simple, user-friendly content management system (CMS) that allows you to easily
+            update text, images, and other content without technical knowledge.
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+          <button class="faq-question">Do you provide hosting services?</button>
+          <div class="faq-answer">
+            Yes, we offer reliable hosting solutions with a 99.9% uptime guarantee, regular backups, and security
+            monitoring. We can also help migrate your existing website to our servers.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       QUOTE CALCULATOR
+       ============================= -->
+  <section class="section-padding" id="quote">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="chunky-badge">Instant Estimate</span>
+        <h2 class="section-title">Quote calculator.</h2>
+      </div>
+
+      <div class="calculator-container clay" data-aos="fade-up" data-aos-delay="100">
+        <form id="quote-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="type">Website Type</label>
+            <select id="type" name="type">
+              <option value="2099">Basic Website (R2,099)</option>
+              <option value="3499">Business Website (R3,499)</option>
+              <option value="6999">E-Commerce Website (R6,999)</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Additional Features</label>
+            <div class="features" id="features">
+              <label><input type="checkbox" value="500" /> SEO Optimization (+R500)</label>
+              <label><input type="checkbox" value="200" /> Live Chat (+R200)</label>
+              <label><input type="checkbox" value="400" /> Blog Setup (+R400)</label>
+              <label><input type="checkbox" value="700" /> Booking System (+R700)</label>
+            </div>
+          </div>
+
+          <button id="downloadQuote" type="button" class="chunky-btn" style="width:100%;">
+            <i class="fas fa-file-pdf"></i> Download Quote (PDF)
+          </button>
+
+          <div class="result" id="result">Estimated Quote: R2,099</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       FINAL CTA / JOURNEY
+       ============================= -->
+  <section class="journey-section" id="journey">
+    <div class="constellation" id="constellation"></div>
+
+    <div class="journey-content" data-aos="fade-up">
+      <span class="chunky-badge">Let's Build</span>
+      <h2>Ready to build your vision?</h2>
+      <p>From concept to launch — we craft digital experiences that perform.</p>
+      <a href="#booking" class="chunky-btn">
+        Start Your Project <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- =============================
+       CONTACT
+       ============================= -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="chunky-badge">Contact</span>
+        <h2 class="section-title">Let's create magic together.</h2>
+        <p class="section-sub">Follow along or reach out — we're always up for a good conversation.</p>
+      </div>
+
+      <div class="social-icons" data-aos="fade-up" data-aos-delay="100">
+        <a href="https://www.facebook.com/profile.php?id=61577908416134" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/@jaywebs10" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/jaywebs10" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/27760944650" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       FOOTER
+       ============================= -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 JayWebs. All rights reserved. — Futuristic Web Design South Africa</p>
+    </div>
+  </footer>
+
+  <!-- Floating buttons -->
+  <a href="https://wa.me/27760944650" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <a href="#booking" class="sticky-contact-btn" aria-label="Book a Consultation">
+    <i class="fas fa-calendar-alt"></i> Book Now
+  </a>
+
+  <!-- =============================
+       EXTERNAL SCRIPTS
+       ============================= -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      /* =========================================================
+         AOS
+         ========================================================= */
+      if (window.AOS) {
+        AOS.init({ duration: 900, once: true, offset: 80 });
+      }
+
+      /* =========================================================
+         TESTIMONIALS SWIPER — adaptive slides per view
+         ========================================================= */
+      let testimonialsSwiper;
+      try {
+        testimonialsSwiper = new Swiper('.testimonials-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          pagination: { el: '.testimonials-pagination', clickable: true },
+          autoplay: { delay: 5000, disableOnInteraction: false },
+          loop: true,
+          breakpoints: {
+            640:  { slidesPerView: 2, spaceBetween: 22 },
+            1024: { slidesPerView: 3, spaceBetween: 24 }
+          }
+        });
+      } catch (e) { console.warn('Testimonials swiper init failed:', e); }
+
+      /* =========================================================
+         MOBILE NAV
+         ========================================================= */
+      const menuBtn = document.getElementById('mobileMenuToggle');
+      const nav = document.getElementById('mainNav');
+
+      if (menuBtn && nav) {
+        menuBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          nav.classList.toggle('open');
+          const icon = menuBtn.querySelector('i');
+          icon.classList.toggle('fa-bars');
+          icon.classList.toggle('fa-times');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!nav.contains(e.target) && !menuBtn.contains(e.target) && nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            menuBtn.querySelector('i').classList.add('fa-bars');
+            menuBtn.querySelector('i').classList.remove('fa-times');
+          }
+        });
+      }
+
+      /* =========================================================
+         SMOOTH SCROLL FOR NAV LINKS
+         ========================================================= */
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#' || targetId.length < 2) return;
+          const target = document.querySelector(targetId);
+          if (!target) return;
+          e.preventDefault();
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+          if (nav && nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            menuBtn.querySelector('i').classList.add('fa-bars');
+            menuBtn.querySelector('i').classList.remove('fa-times');
+          }
+        });
+      });
+
+      /* =========================================================
+         FAQ ACCORDION
+         ========================================================= */
+      document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', () => {
+          const answer = q.nextElementSibling;
+          const isActive = q.classList.contains('active');
+          document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+          document.querySelectorAll('.faq-question').forEach(x => x.classList.remove('active'));
+          if (!isActive) {
+            answer.style.display = 'block';
+            q.classList.add('active');
+          }
+        });
+      });
+
+      /* =========================================================
+         QUOTE CALCULATOR
+         ========================================================= */
+      const typeSelect = document.getElementById('type');
+      const featureCheckboxes = document.querySelectorAll('.features input[type="checkbox"]');
+      const resultDiv = document.getElementById('result');
+
+      function calculateQuote() {
+        let total = parseInt(typeSelect.value) || 0;
+        featureCheckboxes.forEach(cb => { if (cb.checked) total += parseInt(cb.value) || 0; });
+        resultDiv.textContent = `Estimated Quote: R${total.toLocaleString()}`;
+      }
+
+      if (typeSelect) {
+        typeSelect.addEventListener('change', calculateQuote);
+        featureCheckboxes.forEach(cb => cb.addEventListener('change', calculateQuote));
+        calculateQuote();
+      }
+
+      /* =========================================================
+         PDF QUOTE
+         ========================================================= */
+      const downloadBtn = document.getElementById('downloadQuote');
+      if (downloadBtn) {
+        downloadBtn.addEventListener('click', function () {
+          try {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            const quote = resultDiv ? resultDiv.textContent : 'Estimated Quote: R0';
+
+            doc.setFontSize(22);
+            doc.text("JayWebs Quote", 20, 30);
+            doc.setFontSize(14);
+            doc.text(quote, 20, 55);
+            doc.text("Thank you for your interest in JayWebs!", 20, 75);
+            doc.text("We'll contact you shortly to discuss your project.", 20, 88);
+            doc.save('jaywebs-quote.pdf');
+          } catch (err) {
+            console.error('PDF generation failed', err);
+            alert('Unable to generate PDF in this browser.');
+          }
+        });
+      }
+
+      /* =========================================================
+         STATS COUNTER
+         ========================================================= */
+      const stats = document.querySelectorAll('.stat-number');
+      let statsDone = false;
+
+      function animateStats() {
+        if (statsDone) return;
+        statsDone = true;
+        stats.forEach(stat => {
+          const target = parseInt(stat.getAttribute('data-target')) || 0;
+          const duration = 1800;
+          const step = target / (duration / 16);
+          let current = 0;
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            stat.textContent = Math.floor(current);
+          }, 16);
+        });
+      }
+
+      const statsSection = document.getElementById('impact');
+      if (statsSection && 'IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) { animateStats(); obs.unobserve(entry.target); }
+          });
+        }, { threshold: 0.4 });
+        obs.observe(statsSection);
+      } else { animateStats(); }
+
+      /* =========================================================
+         BOOKING FORM VALIDATION
+         ========================================================= */
+      const bookingForm = document.getElementById('booking-form');
+      const dateInput = document.getElementById('date');
+      const bookingSpinner = document.getElementById('booking-spinner');
+      const bookingSuccess = document.getElementById('booking-success');
+      const bookingSubmit = document.getElementById('booking-submit');
+
+      if (dateInput) {
+        dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+      }
+
+      const validators = {
+        name: () => {
+          const el = document.getElementById('name');
+          const err = document.getElementById('name-error');
+          const ok = el.value.trim() !== '';
+          el.classList.toggle('error', !ok);
+          err.style.display = ok ? 'none' : 'block';
+          return ok;
+        },
+        email: () => {
+          const el = document.getElementById('email');
+          const err = document.getElementById('email-error');
+          const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+          el.classList.toggle('error', !ok);
+          err.style.display = ok ? 'none' : 'block';
+          return ok;
+        },
+        phone: () => {
+          const el = document.getElementById('phone');
+          const err = document.getElementById('phone-error');
+          const ok = el.value.trim().length >= 8;
+          el.classList.toggle('error', !ok);
+          err.style.display = ok ? 'none' : 'block';
+          return ok;
+        },
+        service: () => {
+          const el = document.getElementById('service');
+          const err = document.getElementById('service-error');
+          const ok = el.value !== '';
+          el.classList.toggle('error', !ok);
+          err.style.display = ok ? 'none' : 'block';
+          return ok;
+        },
+        date: () => {
+          const el = document.getElementById('date');
+          const err = document.getElementById('date-error');
+          const ok = el.value !== '';
+          el.classList.toggle('error', !ok);
+          err.style.display = ok ? 'none' : 'block';
+          return ok;
+        },
+        time: () => {
+          const el = document.getElementById('time');
+          const err = document.getElementById('time-error');
+          const ok = el.value !== '';
+          el.classList.toggle('error', !ok);
+          err.style.display = ok ? 'none' : 'block';
+          return ok;
+        }
+      };
+
+      ['name', 'email', 'phone'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('blur', validators[id]);
+      });
+      document.getElementById('service')?.addEventListener('change', validators.service);
+      document.getElementById('date')?.addEventListener('change', validators.date);
+      document.getElementById('time')?.addEventListener('change', validators.time);
+
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const valid = Object.keys(validators).every(k => validators[k]());
+          if (!valid) return;
+
+          bookingSpinner.style.display = 'block';
+          bookingSubmit.disabled = true;
+
+          setTimeout(() => {
+            bookingSpinner.style.display = 'none';
+            bookingSuccess.style.display = 'block';
+            bookingForm.reset();
+            if (dateInput) dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+            bookingSubmit.disabled = false;
+            setTimeout(() => { bookingSuccess.style.display = 'none'; }, 5000);
+          }, 1400);
+        });
+      }
+
+      /* =========================================================
+         SCROLL-AWARE NAVBAR
+         ========================================================= */
+      const header = document.getElementById('mainHeader');
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        if (nav && nav.classList.contains('open')) return;
+        if (window.scrollY > lastScrollY && window.scrollY > 120) {
+          header.classList.add('hidden');
+        } else {
+          header.classList.remove('hidden');
+        }
+        lastScrollY = window.scrollY;
+
+        const sections = document.querySelectorAll('section[id]');
+        let currentId = '';
+        sections.forEach(sec => {
+          if (window.scrollY >= sec.offsetTop - 120) currentId = sec.id;
+        });
+        document.querySelectorAll('.nav-links a').forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + currentId);
+        });
+      });
+
+      /* =========================================================
+         3D CLAY SPHERE — OUR MASTERPIECES
+         ========================================================= */
+      (function initSphereGallery() {
+        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+          console.warn('GSAP / ScrollTrigger not loaded — 3D gallery skipped.');
+          return;
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        /* -------- BUSINESS IMAGES -------- */
+        const IMAGES = [
+          "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80&auto=format&fit=crop"
+        ];
+
+        const TEXT_CONTENT = [
+          {
+            title: "E-Commerce Platform",
+            desc: "Modern online store with seamless user experience and secure payment integration."
+          },
+          {
+            title: "Corporate Website",
+            desc: "Professional brand presence with storytelling, lead generation, and CMS-powered content."
+          },
+          {
+            title: "SaaS Dashboard",
+            desc: "Data-driven interface with real-time analytics, clean UX, and responsive layouts."
+          },
+          {
+            title: "Restaurant Website",
+            desc: "Beautiful restaurant site with online menu, gallery, and reservation system."
+          },
+          {
+            title: "Real Estate Portal",
+            desc: "Property listings with advanced search, filtering, and map integration."
+          }
+        ];
+
+        const sphere = document.getElementById('sphere');
+        const constellation = document.getElementById('constellation');
+        const titleEl = document.getElementById('dynamic-title');
+        const descEl = document.getElementById('dynamic-desc');
+        if (!sphere) return;
+
+        /* -------- Responsive radius -------- */
+        function getRadius() {
+          const w = window.innerWidth;
+          if (w < 360) return 150;
+          if (w < 480) return 170;
+          if (w < 640) return 195;
+          if (w < 900) return 220;
+          if (w < 1100) return 280;
+          if (w < 1440) return 340;
+          return 380;
+        }
+
+        /* -------- Responsive card size -------- */
+        function applyCardSize() {
+          const w = window.innerWidth;
+          let cw, ch;
+          if (w < 360)      { cw = 80;  ch = 110; }
+          else if (w < 480) { cw = 90;  ch = 125; }
+          else if (w < 640) { cw = 100; ch = 140; }
+          else if (w < 900) { cw = 120; ch = 165; }
+          else if (w < 1100){ cw = 145; ch = 195; }
+          else              { cw = 170; ch = 230; }
+          document.querySelectorAll('.clay-card').forEach(card => {
+            if (card.classList.contains('constellation-card')) return;
+            card.style.width = cw + 'px';
+            card.style.height = ch + 'px';
+            card.style.left = (-cw / 2) + 'px';
+            card.style.top = (-ch / 2) + 'px';
+          });
+        }
+
+        const galleryItems = [...IMAGES, ...IMAGES].slice(0, 24);
+
+        /* Fibonacci sphere distribution */
+        let radius = getRadius();
+        galleryItems.forEach((src, i) => {
+          const card = document.createElement('div');
+          card.classList.add('clay-card');
+
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = 'JayWebs project ' + (i + 1);
+          img.loading = 'lazy';
+          card.appendChild(img);
+
+          const phi = Math.acos(1 - (2 * (i + 0.5)) / galleryItems.length);
+          const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+
+          const x = radius * Math.cos(theta) * Math.sin(phi);
+          const y = radius * Math.sin(theta) * Math.sin(phi);
+          const z = radius * Math.cos(phi);
+
+          const rotY = Math.atan2(x, z) * (180 / Math.PI);
+          const rotX = Math.asin(-y / radius) * (180 / Math.PI);
+
+          card.style.transform =
+            `translate3d(${x}px, ${y}px, ${z}px) rotateY(${rotY}deg) rotateX(${rotX}deg)`;
+
+          card.dataset.index = i;
+          sphere.appendChild(card);
+        });
+
+        applyCardSize();
+        const allCards = sphere.querySelectorAll('.clay-card');
+
+        /* Highlight + update text on scroll */
+        function updateActiveCard(progress) {
+          const textIndex = Math.floor(progress * TEXT_CONTENT.length) % TEXT_CONTENT.length;
+
+          if (titleEl && titleEl.innerText !== TEXT_CONTENT[textIndex].title) {
+            gsap.to([titleEl, descEl], {
+              opacity: 0,
+              duration: 0.2,
+              onComplete: () => {
+                titleEl.innerText = TEXT_CONTENT[textIndex].title;
+                descEl.innerText = TEXT_CONTENT[textIndex].desc;
+                gsap.to([titleEl, descEl], { opacity: 1, duration: 0.25 });
+              }
+            });
+          }
+
+          const focusIndex = Math.floor(progress * galleryItems.length);
+          allCards.forEach((card, idx) => {
+            card.classList.toggle('active-card', Math.abs(idx - focusIndex) < 2);
+          });
+        }
+
+        /* Rotate sphere on scroll */
+        gsap.to(sphere, {
+          rotateY: 360 * 2,
+          rotateX: 45,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.gallery-wrap',
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: 1,
+            onUpdate: (self) => updateActiveCard(self.progress)
+          }
+        });
+
+        /* Constellation scatter in journey section */
+        if (constellation) {
+          const scatterPositions = [
+            { top: '12%', left: '10%' },
+            { top: '18%', left: '82%' },
+            { top: '62%', left: '8%' },
+            { top: '72%', left: '86%' },
+            { top: '84%', left: '32%' },
+            { top: '14%', left: '48%' }
+          ];
+
+          scatterPositions.forEach((pos, i) => {
+            const card = document.createElement('div');
+            card.classList.add('clay-card', 'constellation-card');
+            card.style.top = pos.top;
+            card.style.left = pos.left;
+            const rot = (Math.random() - 0.5) * 40;
+            card.style.transform = `rotate(${rot}deg) scale(0.8)`;
+
+            const img = document.createElement('img');
+            img.src = IMAGES[i % IMAGES.length];
+            img.alt = '';
+            img.loading = 'lazy';
+            card.appendChild(img);
+
+            constellation.appendChild(card);
+          });
+
+          gsap.to('.constellation-card', {
+            y: -100,
+            ease: 'none',
+            stagger: 0.1,
+            scrollTrigger: {
+              trigger: '.journey-section',
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true
+            }
+          });
+        }
+
+        /* Recalculate on resize (debounced) */
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => {
+            const newRadius = getRadius();
+            if (newRadius !== radius) {
+              radius = newRadius;
+              allCards.forEach((card, i) => {
+                const phi = Math.acos(1 - (2 * (i + 0.5)) / galleryItems.length);
+                const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+                const x = radius * Math.cos(theta) * Math.sin(phi);
+                const y = radius * Math.sin(theta) * Math.sin(phi);
+                const z = radius * Math.cos(phi);
+                const rotY = Math.atan2(x, z) * (180 / Math.PI);
+                const rotX = Math.asin(-y / radius) * (180 / Math.PI);
+                card.style.transform =
+                  `translate3d(${x}px, ${y}px, ${z}px) rotateY(${rotY}deg) rotateX(${rotX}deg)`;
+              });
+            }
+            applyCardSize();
+            ScrollTrigger.refresh();
+          }, 200);
+        });
+
+        window.addEventListener('load', () => ScrollTrigger.refresh());
+      })();
+    });
+  </script>
+</body>
+</html>
