@@ -2216,6 +2216,18 @@
     window.addEventListener('load', function () {
       if (window.AOS) AOS.init({ duration: 900, once: true, offset: 80 });
 
+      /* Helper to load an image as HTMLImageElement (for PDF embedding) */
+      function loadImage(url) {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.crossOrigin = 'anonymous';
+          img.onload = () => resolve(img);
+          img.onerror = () => reject(new Error('Image failed to load'));
+          img.src = url;
+          setTimeout(() => reject(new Error('Image load timeout')), 6000);
+        });
+      }
+
       /* =========================================================
          MOBILE NAV
          ========================================================= */
@@ -2396,7 +2408,7 @@
         `;
       }
 
-      // Pre-fill quote request into contact form (just as before)
+      // Pre-fill quote request into contact form
       document.getElementById('calcRequestBtn')?.addEventListener('click', () => {
         document.getElementById('service').value = calcState.siteType === 'ecommerce' ? 'E-Commerce' :
                                                   calcState.siteType === 'landing' ? 'Landing Page' :
@@ -2413,54 +2425,324 @@
         document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
       });
 
-      // PDF export
-      document.getElementById('downloadQuote')?.addEventListener('click', () => {
+      /* =========================================================
+         DARK-THEMED PROFESSIONAL PDF QUOTATION
+         Matches website clay aesthetic — dark bg, cyan accents
+         ========================================================= */
+      document.getElementById('downloadQuote')?.addEventListener('click', async () => {
+        const btn = document.getElementById('downloadQuote');
+        const originalHTML = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating PDF...';
+
         try {
           const { jsPDF } = window.jspdf;
-          const doc = new jsPDF();
+          const doc = new jsPDF({ unit: 'mm', format: 'a4' });
           const est = computeEstimate();
 
-          doc.setFontSize(22);
-          doc.text('JayWebs', 20, 30);
-          doc.setFontSize(12);
-          doc.setTextColor(120);
-          doc.text('Modern websites for modern businesses.', 20, 40);
-          doc.setTextColor(0);
-          doc.text('Estimate — ' + new Date().toLocaleDateString(), 20, 55);
-          doc.line(20, 60, 190, 60);
+          const PW = doc.internal.pageSize.getWidth();   // 210
+          const PH = doc.internal.pageSize.getHeight();  // 297
+          const M  = 15;
+          const CONTENT_W = PW - M * 2;
 
-          doc.setFontSize(14);
-          doc.text('Your Selections', 20, 75);
+          /* ---- Brand palette (matches website CSS variables) ---- */
+          const C = {
+            bgDark:     [10, 10, 11],      // --bg-dark #0a0a0b
+            bgElev:     [19, 19, 22],      // --bg-elev #131316
+            clayBase:   [24, 24, 27],      // --clay-base #18181b
+            claySoft:   [30, 30, 34],
+            textMain:   [244, 244, 245],   // --text-main #f4f4f5
+            textMuted:  [161, 161, 170],   // --text-muted #a1a1aa
+            accent:     [0, 191, 255],     // --accent #00bfff
+            border:     [45, 45, 52],
+            borderSoft: [35, 35, 40]
+          };
 
+          /* ---- Metadata ---- */
+          const now = new Date();
+          const dateStr = now.toLocaleDateString('en-GB', {
+            day: '2-digit', month: 'short', year: 'numeric'
+          });
+          const refNum = 'JW-' + now.getFullYear() + '-' +
+                         String(Math.floor(Math.random() * 9000) + 1000);
+
+          /* ---- Client info from contact form ---- */
+          const clientName     = (document.getElementById('name')?.value || '').trim();
+          const clientEmail    = (document.getElementById('email')?.value || '').trim();
+          const clientPhone    = (document.getElementById('phone')?.value || '').trim();
+          const clientBusiness = (document.getElementById('business')?.value || '').trim();
+
+          /* ---- Load logo ---- */
+          let logoImg = null;
+          try {
+            logoImg = await loadImage('https://i.postimg.cc/SQJHd3P3/FF369872-B995-4943-8981-FDB5859BE291.png');
+          } catch (e) {
+            console.warn('Logo not available for PDF, using text fallback.', e);
+          }
+
+          /* =====================================================
+             FULL DARK BACKGROUND
+             ===================================================== */
+          doc.setFillColor(C.bgDark[0], C.bgDark[1], C.bgDark[2]);
+          doc.rect(0, 0, PW, PH, 'F');
+
+          /* Subtle grid pattern (like website body::before) */
+          doc.setDrawColor(255, 255, 255);
+          doc.setLineWidth(0.05);
+          for (let gx = 0; gx < PW; gx += 12) {
+            doc.setFillColor(255, 255, 255);
+            for (let gy = 0; gy < PH; gy += 12) {
+              // tiny dots for texture (sparse)
+              if ((gx + gy) % 36 === 0) {
+                doc.circle(gx, gy, 0.08, 'F');
+              }
+            }
+          }
+
+          /* =====================================================
+             HEADER BAR
+             ===================================================== */
+          const HEADER_H = 40;
+          doc.setFillColor(C.clayBase[0], C.clayBase[1], C.clayBase[2]);
+          doc.rect(0, 0, PW, HEADER_H, 'F');
+
+          /* Cyan accent line under header */
+          doc.setFillColor(C.accent[0], C.accent[1], C.accent[2]);
+          doc.rect(0, HEADER_H, PW, 0.8, 'F');
+
+          /* Logo */
+          if (logoImg) {
+            let logoH = 16;
+            let logoW = (logoImg.width / logoImg.height) * logoH;
+            if (logoW > 60) { logoW = 60; logoH = (logoImg.height / logoImg.width) * logoW; }
+            try {
+              doc.addImage(logoImg, 'PNG', M, (HEADER_H - logoH) / 2, logoW, logoH);
+            } catch (e) {
+              doc.setTextColor(C.textMain[0], C.textMain[1], C.textMain[2]);
+              doc.setFontSize(20);
+              doc.setFont('helvetica', 'bold');
+              doc.text('JayWebs', M, HEADER_H / 2 + 3);
+            }
+          } else {
+            doc.setTextColor(C.textMain[0], C.textMain[1], C.textMain[2]);
+            doc.setFontSize(22);
+            doc.setFont('helvetica', 'bold');
+            doc.text('JayWebs', M, HEADER_H / 2 + 3);
+          }
+
+          /* QUOTATION label + ref/date */
+          doc.setTextColor(C.textMain[0], C.textMain[1], C.textMain[2]);
+          doc.setFontSize(16);
+          doc.setFont('helvetica', 'bold');
+          doc.text('QUOTATION', PW - M, 15, { align: 'right' });
+
+          doc.setFontSize(8.5);
+          doc.setFont('helvetica', 'normal');
+          doc.setTextColor(C.textMuted[0], C.textMuted[1], C.textMuted[2]);
+          doc.text('Ref:  ' + refNum, PW - M, 22, { align: 'right' });
+          doc.text('Date: ' + dateStr, PW - M, 27, { align: 'right' });
+
+          /* =====================================================
+             FROM / PREPARED FOR
+             ===================================================== */
+          let y = HEADER_H + 14;
+
+          doc.setFontSize(7.5);
+          doc.setFont('helvetica', 'bold');
+          doc.setTextColor(C.accent[0], C.accent[1], C.accent[2]);
+          doc.text('FROM', M, y);
+          doc.text('PREPARED FOR', PW / 2 + 5, y);
+
+          y += 5;
           doc.setFontSize(11);
-          let y = 90;
-          const rows = [
-            ['Website Type', siteLabels[calcState.siteType]],
-            ['Pages', calcState.pages],
-            ['Features', calcState.features.length ? calcState.features.map(f => featureLabels[f]).join(', ') : 'None'],
-            ['Content', calcState.content === 'have' ? 'Client provides' : 'JayWebs assistance']
+          doc.setTextColor(C.textMain[0], C.textMain[1], C.textMain[2]);
+          doc.setFont('helvetica', 'bold');
+          doc.text('JayWebs', M, y);
+          doc.text(clientName || '—', PW / 2 + 5, y);
+
+          y += 5;
+          doc.setFontSize(9);
+          doc.setFont('helvetica', 'normal');
+          doc.setTextColor(C.textMuted[0], C.textMuted[1], C.textMuted[2]);
+          doc.text('Web Design & Development', M, y);
+          if (clientBusiness) doc.text(clientBusiness, PW / 2 + 5, y);
+
+          y += 4.5;
+          doc.text('South Africa', M, y);
+          if (clientEmail) doc.text(clientEmail, PW / 2 + 5, y);
+
+          y += 4.5;
+          doc.text('WhatsApp: +27 63 523 5951', M, y);
+          if (clientPhone) doc.text(clientPhone, PW / 2 + 5, y);
+
+          y += 4.5;
+          doc.text('X: @jaywebs10  ·  jaywebs.site', M, y);
+
+          /* =====================================================
+             SECTION DIVIDER HELPER
+             ===================================================== */
+          function sectionDivider(yPos) {
+            doc.setDrawColor(C.border[0], C.border[1], C.border[2]);
+            doc.setLineWidth(0.3);
+            doc.line(M, yPos, PW - M, yPos);
+          }
+
+          function sectionTitle(title, yPos) {
+            doc.setFontSize(11);
+            doc.setFont('helvetica', 'bold');
+            doc.setTextColor(C.textMain[0], C.textMain[1], C.textMain[2]);
+            doc.text(title, M, yPos);
+
+            doc.setDrawColor(C.accent[0], C.accent[1], C.accent[2]);
+            doc.setLineWidth(0.8);
+            doc.line(M, yPos + 2, M + 28, yPos + 2);
+
+            return yPos + 10;
+          }
+
+          /* =====================================================
+             PROJECT OVERVIEW
+             ===================================================== */
+          y += 12;
+          sectionDivider(y);
+
+          y += 10;
+          y = sectionTitle('PROJECT OVERVIEW', y);
+
+          const overview = [
+            ['Website Type',     siteLabels[calcState.siteType]],
+            ['Estimated Pages',  calcState.pages],
+            ['Features',         calcState.features.length
+                                    ? calcState.features.map(f => featureLabels[f]).join(', ')
+                                    : 'None selected'],
+            ['Content',          calcState.content === 'have'
+                                    ? 'Client provides content'
+                                    : 'JayWebs provides content assistance']
           ];
-          rows.forEach(([k, v]) => {
-            doc.text(k + ':', 20, y);
-            const wrapped = doc.splitTextToSize(String(v), 110);
-            doc.text(wrapped, 70, y);
-            y += (wrapped.length * 6) + 4;
+
+          overview.forEach(([k, v]) => {
+            doc.setFont('helvetica', 'bold');
+            doc.setFontSize(9);
+            doc.setTextColor(C.textMuted[0], C.textMuted[1], C.textMuted[2]);
+            doc.text(k, M, y);
+
+            doc.setFont('helvetica', 'normal');
+            doc.setTextColor(C.textMain[0], C.textMain[1], C.textMain[2]);
+            const wrapped = doc.splitTextToSize(String(v), CONTENT_W - 55);
+            doc.text(wrapped, M + 55, y);
+            y += Math.max(6, wrapped.length * 5) + 2;
           });
 
-          doc.line(20, y + 5, 190, y + 5);
-          doc.setFontSize(16);
-          doc.text('Estimated Project Cost', 20, y + 20);
-          doc.setFontSize(22);
-          doc.text('R' + est.toLocaleString(), 20, y + 34);
-          doc.setFontSize(10);
-          doc.setTextColor(120);
-          doc.text('This is an estimate. Final pricing depends on project requirements.', 20, y + 48);
-          doc.text('Contact: WhatsApp +27 63 523 5951 · X: @jaywebs10', 20, y + 58);
+          /* =====================================================
+             PRICING SUMMARY
+             ===================================================== */
+          y += 6;
+          sectionDivider(y);
 
-          doc.save('jaywebs-estimate.pdf');
+          y += 10;
+          y = sectionTitle('PRICING SUMMARY', y);
+
+          /* Build itemized lines */
+          const baseRaw = (siteBase[calcState.siteType] || 2499) *
+                          (pageMultiplier[calcState.pages] || 1);
+          const baseRounded = Math.round(baseRaw);
+
+          const lines = [
+            [`${siteLabels[calcState.siteType]} — base package`, baseRounded]
+          ];
+
+          calcState.features.forEach(f => {
+            lines.push([`• ${featureLabels[f]}`, featurePrices[f] || 0]);
+          });
+
+          if (calcState.content === 'help') {
+            lines.push(['• Content assistance', 800]);
+          }
+
+          lines.forEach(([label, amount]) => {
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(9);
+            doc.setTextColor(C.textMuted[0], C.textMuted[1], C.textMuted[2]);
+            doc.text(label, M, y);
+            doc.setTextColor(C.textMain[0], C.textMain[1], C.textMain[2]);
+            doc.text('R ' + amount.toLocaleString(), PW - M, y, { align: 'right' });
+            y += 6;
+          });
+
+          /* Total block — clay panel with cyan border */
+          y += 4;
+          const totalH = 16;
+          doc.setFillColor(C.bgElev[0], C.bgElev[1], C.bgElev[2]);
+          doc.rect(M, y - 6, CONTENT_W, totalH, 'F');
+          doc.setDrawColor(C.accent[0], C.accent[1], C.accent[2]);
+          doc.setLineWidth(0.6);
+          doc.rect(M, y - 6, CONTENT_W, totalH);
+
+          doc.setFont('helvetica', 'bold');
+          doc.setFontSize(10);
+          doc.setTextColor(C.textMuted[0], C.textMuted[1], C.textMuted[2]);
+          doc.text('ESTIMATED TOTAL', M + 5, y + 3);
+
+          doc.setFontSize(17);
+          doc.setTextColor(C.accent[0], C.accent[1], C.accent[2]);
+          doc.text('R ' + est.toLocaleString(), PW - M - 5, y + 3.5, { align: 'right' });
+
+          y += 24;
+
+          /* =====================================================
+             NOTES & TERMS
+             ===================================================== */
+          y = sectionTitle('NOTES & TERMS', y);
+
+          doc.setFont('helvetica', 'normal');
+          doc.setFontSize(8.5);
+          doc.setTextColor(C.textMuted[0], C.textMuted[1], C.textMuted[2]);
+
+          const terms = [
+            'This document is an estimate only. Final pricing depends on the full scope of the project.',
+            'A 50% deposit is required before work begins; the balance is due on completion.',
+            'Timelines are agreed upfront and depend on project complexity and content readiness.',
+            'Revisions are part of the process — scope is confirmed before work starts.',
+            'Hosting and domain fees are separate and paid directly to the provider.',
+            'This quotation is valid for 30 days from the date above.'
+          ];
+
+          terms.forEach(t => {
+            const wrapped = doc.splitTextToSize('• ' + t, CONTENT_W - 3);
+            doc.text(wrapped, M, y);
+            y += wrapped.length * 4.5 + 1;
+          });
+
+          /* =====================================================
+             FOOTER
+             ===================================================== */
+          const footerY = PH - 15;
+
+          doc.setDrawColor(C.border[0], C.border[1], C.border[2]);
+          doc.setLineWidth(0.3);
+          doc.line(M, footerY - 5, PW - M, footerY - 5);
+
+          /* Cyan accent pixel under footer line */
+          doc.setFillColor(C.accent[0], C.accent[1], C.accent[2]);
+          doc.rect(M, footerY - 4.7, 20, 0.5, 'F');
+
+          doc.setFontSize(8);
+          doc.setFont('helvetica', 'normal');
+          doc.setTextColor(C.textMuted[0], C.textMuted[1], C.textMuted[2]);
+          doc.text('JayWebs · Web Design & Development · South Africa', M, footerY);
+          doc.text('jaywebs.site', PW - M, footerY, { align: 'right' });
+
+          /* =====================================================
+             SAVE
+             ===================================================== */
+          doc.save(`JayWebs-Quotation-${refNum}.pdf`);
+
         } catch (err) {
-          console.error(err);
-          alert('Unable to generate PDF in this browser.');
+          console.error('PDF generation failed:', err);
+          alert('Unable to generate PDF in this browser. Please try again or contact us on WhatsApp.');
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = originalHTML;
         }
       });
 
@@ -2525,7 +2807,6 @@
           spinner.style.display = 'block';
           submit.disabled = true;
 
-          // Gather form data
           const name = document.getElementById('name').value.trim();
           const email = document.getElementById('email').value.trim();
           const phone = document.getElementById('phone').value.trim();
@@ -2536,7 +2817,6 @@
           const date = document.getElementById('date').value;
           const message = document.getElementById('message').value.trim();
 
-          // Build WhatsApp message
           let waText = `*New Project Request — JayWebs*\n\n`;
           waText += `*Name:* ${name}\n`;
           waText += `*Email:* ${email}\n`;
@@ -2550,7 +2830,6 @@
 
           const waUrl = `https://wa.me/27635235951?text=${encodeURIComponent(waText)}`;
 
-          // Open WhatsApp
           setTimeout(() => {
             spinner.style.display = 'none';
             success.style.display = 'block';
